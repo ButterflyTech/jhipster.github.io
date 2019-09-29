@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Release notes
+title: 版本通知
 permalink: /releases/
 redirect_from:
   - /releases.html
@@ -9,9 +9,9 @@ sitemap:
     lastmod: 2014-02-17T00:00:00-00:00
 ---
 
-# <i class="fa fa-file-text-o"></i> Release notes
+# <i class="fa fa-file-text-o"></i> 版本通知
 
-To get the latest JHipster news, please follow us on Twitter: [@java_hipster](https://twitter.com/java_hipster)
+获取Jhipster的最新动态, 请关注我们的推特: [@java_hipster](https://twitter.com/java_hipster)
 
 {% for post in site.posts %}
   {% assign split_post_title = post.title | split: "Release " %}
