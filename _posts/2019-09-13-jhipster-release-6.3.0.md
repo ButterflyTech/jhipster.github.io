@@ -6,92 +6,94 @@ title: Release 6.3.0
 JHipster release v6.3.0
 ==================
 
-This release fixes an **important security vulnerability**:
+这个版本修复了一个**重要的安全漏洞**:
 
-- Please read the [security advisory here](https://github.com/jhipster/generator-jhipster/security/advisories/GHSA-mwp6-j9wf-968c).
-- **Are you vulnerable?** if you use JWT, session or UAA authentication, and more importantly if you use our system to send a link to reset passwords, then you are affected. The algorithm used isn't cryptographically secure, which means that an attacker could guess a reset link, and hence take over any account in the system.
-- **How to fix the issue** you probably don't need to upgrade JHipster, as this just affects a few generated files, so this can be done manually. The issue is in the generated `RandomUtil` class. [Here is this class in our sample application generated with JHipster v6.2.0](https://github.com/jhipster/jhipster-sample-app/blob/v6.2.0/src/main/java/io/github/jhipster/sample/service/util/RandomUtil.java) and [here is the updated version, using JHipster v6.3.0](https://github.com/jhipster/jhipster-sample-app/blob/v6.3.0/src/main/java/io/github/jhipster/sample/service/util/RandomUtil.java). So all you need to do is copy the new file, which uses `SecureRandom`, and replace the older file.
-- **How this issue was handled** This issue was found by [Jonathan Leitschuh](https://github.com/JLLeitschuh), and was fixed in the next couple of hours by [Frederik Hahne](https://github.com/atomfrede). Please note that we gave a [$500 bug bounty to Jonathan](https://github.com/jhipster/generator-jhipster/issues/10401) as well as a [$300 bug bounty to Frederik](https://github.com/jhipster/generator-jhipster/issues/10402). For obvious security reasons, only the [JHipster core dev team](https://www.jhipster.tech/team/) knew about this issue during that period. We then waited one day in order to inform everyone, including doing [an advisory on our Twitter account](https://twitter.com/java_hipster/status/1172387424715988994) so that our users are not caught up with a surprise emergency release.
-- **What will happen next** This is the first time we used the "security advisory" feature from GitHub. We certainly learned a lot, and we will provide in the very near future a clear path to report security advisories to the team.
+- 请浏览这篇文章[security advisory here](https://github.com/jhipster/generator-jhipster/security/advisories/GHSA-mwp6-j9wf-968c).
+- **是否受影响?** 如果你使用JWT, session或者UAA认证, 而且发送我们系统发送密码重置链接, 那么恭喜你, 你受影响了. 机密算法等级不够安全导致攻击者可以猜出密码重置链接, 便可以黑进系统中任何一个账号.
+- **如何修复** 无需升级Jhipster, 这个漏洞只影响几个生成的文件, 所以你可以手动修复. 罪魁祸首就是`RandomUtil`这个类. [Here is this class in our sample application generated with JHipster v6.2.0](https://github.com/jhipster/jhipster-sample-app/blob/v6.2.0/src/main/java/io/github/jhipster/sample/service/util/RandomUtil.java) and [here is the updated version, using JHipster v6.3.0](https://github.com/jhipster/jhipster-sample-app/blob/v6.3.0/src/main/java/io/github/jhipster/sample/service/util/RandomUtil.java). 复制这个使用了`SecureRandom`的新文件然后替换旧文件.
+- **问题处理流程** 这个问题被[Jonathan Leitschuh](https://github.com/JLLeitschuh)发现, 几个小时之后被[Frederik Hahne](https://github.com/atomfrede)修复. 我们奖励了[Jonathan500刀漏洞赏金](https://github.com/jhipster/generator-jhipster/issues/10401), 同时奖励了[Frederik300刀漏洞赏金](https://github.com/jhipster/generator-jhipster/issues/10402). 从安全角度考虑, 当前只有[JHipster核心团队](https://www.jhipster.tech/team/)知道这个问题. 一天之后我们告诉了所有人这个问题, 包括[推特客服咨询](https://twitter.com/java_hipster/status/1172387424715988994), 以便我们的用户不会对这个紧急发布感到惊讶.
+- **后续** 这是我们第一次使用到GitHub的"安全咨询". 我们受益匪浅, 而且在不久的将来, 我们要提供一条简洁的途径用于团队反馈安全建议.      
 
-**What's new in this release**
 
-Apart from the security vulnerability, this is a minor release of JHipster v6 with [247 closed tickets and merged pull requests](https://github.com/jhipster/generator-jhipster/issues?q=milestone%3A6.3.0+is%3Aclosed).
+**更新日志**
 
-Here are the most significant ones:
+除了安全漏洞之外, 这个版本还[关闭了247个工单和合并请求](https://github.com/jhipster/generator-jhipster/issues?q=milestone%3A6.3.0+is%3Aclosed).
 
-- Upgrade to Spring Boot 2.1.8 and Spring Cloud Greenwich SR3
-- All Docker images have been upgraded to their latest versions
-- Migration from Tslint to Eslint ([#10187](https://github.com/jhipster/generator-jhipster/pull/10187) and [#10213](https://github.com/jhipster/generator-jhipster/pull/10213)). The JHipster ESlint configuration is now externalized in a new repository at https://github.com/jhipster/eslint-config-jhipster [#10358](https://github.com/jhipster/generator-jhipster/pull/10358)
-- Created Jar is now non executable by default [#10282](https://github.com/jhipster/generator-jhipster/pull/10282)
-- Enforce architecture constraints with ArchUnit [#10274](https://github.com/jhipster/generator-jhipster/pull/10274)
-- Add a new Feign Client sub-generator based on OpenAPIGenerator [#9548](https://github.com/jhipster/generator-jhipster/issues/9548)
-- Liquibase can use different credentials than the one in the application (so the running application cannot change the current schema)
-- Add support for Caffeine Cache [#10303](https://github.com/jhipster/generator-jhipster/pull/10303)
-- Enhance Google App Engine generator with Java 11, Jar support and more ([#10284](https://github.com/jhipster/generator-jhipster/pull/10284) and [#10336](https://github.com/jhipster/generator-jhipster/pull/10336))
-- Fix the AWS generator monolith flow [#10376](https://github.com/jhipster/generator-jhipster/pull/10376)
-- Fix admin logs screen in Angular [jhipster/ng-jhipster#97](https://github.com/jhipster/ng-jhipster/pull/97)
+最重要的如下:
+
+- 更新至Spring Boot2.1.8和Spring Cloud Greenwich SR3
+- 所有Docker镜像更新到最新
+- 从Tslint迁移到Eslint([#10187](https://github.com/jhipster/generator-jhipster/pull/10187) and [#10213](https://github.com/jhipster/generator-jhipster/pull/10213)). 新的Jhipster Eslint配置文件提供在一个新的仓库: https://github.com/jhipster/eslint-config-jhipster [#10358](https://github.com/jhipster/generator-jhipster/pull/10358)
+- 创建的Jar包默认不可执行 [#10282](https://github.com/jhipster/generator-jhipster/pull/10282)
+- 使用ArchUnit检查架构特征 [#10274](https://github.com/jhipster/generator-jhipster/pull/10274)
+- 基于OpenAPIGenerator添加了一个新的Feign客户端子生成器 [#9548](https://github.com/jhipster/generator-jhipster/issues/9548)
+- Liquibase支持一个应用中不同的认证 (所以运行中的应用不能修改表结构)
+- 支持Caffeine Cache [#10303](https://github.com/jhipster/generator-jhipster/pull/10303)
+- 通过Java 11，Jar支持等等增强Google App Engine生成器的功能
+ ([#10284](https://github.com/jhipster/generator-jhipster/pull/10284) and [#10336](https://github.com/jhipster/generator-jhipster/pull/10336))
+- 修复AWS generator整体流程 [#10376](https://github.com/jhipster/generator-jhipster/pull/10376)
+- 修复Angular中管理日志页面 [jhipster/ng-jhipster#97](https://github.com/jhipster/ng-jhipster/pull/97)
 - Fix interactions between main generator and blueprint when one is installed globally and the other locally [#10257](https://github.com/jhipster/generator-jhipster/issues/10257)
-- Fix issues with Istio URLs [#10135](https://github.com/jhipster/generator-jhipster/issues/10135)
+- 解决一些Istio URLs的问题 [#10135](https://github.com/jhipster/generator-jhipster/issues/10135)
 
-Closed tickets and merged pull requests
+关闭的工单与合并请求
 ------------
-As always, __[you can check all closed tickets and merged pull requests here](https://github.com/jhipster/generator-jhipster/issues?q=milestone%3A6.3.0+is%3Aclosed)__.
+一如既往, __[你可以在此处查看所有已关闭的工单与已接受合并请求](https://github.com/jhipster/generator-jhipster/issues?q=milestone%3A6.3.0+is%3Aclosed)__.
 
-How to upgrade
+更新指引
 ------------
 
-**Automatic upgrade**
+**自动升级**
 
-For an automatic upgrade, use the [JHipster upgrade sub-generator]({{ site.url }}/upgrading-an-application/) on an existing application:
+在已存在的项目上使用[JHipster upgrade sub-generator]({{ site.url }}/upgrading-an-application/)自动升级:
 
-Upgrade your version of JHipster:
+升级Jhipster版本:
 
 ```
 npm update -g generator-jhipster
 ```
 
-And then run the upgrade sub-generator:
+然后升级子生成器:
 
 ```
 jhipster upgrade
 ```
 
-**Manual upgrades**
+**手动升级**
 
-For a manual upgrade, first upgrade your version of JHipster with:
+选择手动升级, 需要先升级你的Jhipster版本:
 
 ```
 npm update -g generator-jhipster
 ```
 
-If you have an existing project, it will still use the JHipster version with which it was generated.
-To upgrade your project, you must first delete its `node_modules` folder and then run:
+如果你已经有了一个项目, 将会继续使用当时项目生成的Jhipster版本.
+如果需要升级你的项目, 你需要先删除`node_modules`文件夹再运行:
 
 ```
 jhipster
 ```
 
-You can also update your project and all its entities by running
+更新你的项目和所有的实体类
 
 ```
 jhipster --with-entities
 ```
 
-You can also update your entities one-by-one by running again the entity sub-generator, for example if your entity is named _Foo_
+你也可以使用实体类子生成器挨个更新你的实体类, 例如你的实体类名字是_Foo_
 
 ```
 jhipster entity Foo
 ```
 
-Help and bugs
+帮助和缺陷
 --------------
 
-If you find any issue with this release, don't hesitate to:
+如果您发现这个版本的任何问题, 请随时联系我们:
 
-- Add a bug on our [bug tracker](https://github.com/jhipster/generator-jhipster/issues?state=open)
-- Post a question on [Stack Overflow](http://stackoverflow.com/tags/jhipster/info)
+- 在我们的[bug tracker](https://github.com/jhipster/generator-jhipster/issues?state=open)添加一个缺陷报告
+- 在[Stack Overflow](http://stackoverflow.com/tags/jhipster/info)提交问题
 
 If the issue you have is an urgent bug or security issue, please:
 
-- Contact [@java_hipster](https://twitter.com/java_hipster) on Twitter
+- 在推特上联系[@java_hipster](https://twitter.com/java_hipster)
