@@ -9,7 +9,7 @@ sitemap:
     lastmod: 2014-10-18T00:00:00-00:00
 ---
 
-# <i class="fa fa-film"></i> Video tutorial
+# <i class="fa fa-film"></i> 视频教程
 
 <div class="row">
     <div class="col-md-6 col-sm-12">
@@ -18,18 +18,16 @@ sitemap:
                 <iframe width="420" height="315" src="https://www.youtube.com/embed/uQqlO3IGpTU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="caption">
-                <h3 id="thumbnail-label">JHipster Blog Demo<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
-                <p>This 17-minute tutorial shows how to create a JHipster 6 application, work with
-                the provided tools, use the JDL Studio to create several entities with their relationships, 
-                and deploy the end result to the cloud.</p>
-                <p>Presented by Matt Raible (<a href="https://twitter.com/mraible"><i>@mraible</i></a>)</p>
-                <p>Published on 25 Jun 2019</p>
+                <h3 id="thumbnail-label">Jhipster博客Demo<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+                <p>这个17分钟的教程演示了如何使用提供的工具生成一个Jhipster应用，使用JDL Studio创建一些具有关系的实体，并将最后成果发布到云端.</p>
+                <p>由Matt Raible(<a href="https://twitter.com/mraible"><i>@mraible</i></a>)提供</p>
+                <p>发布于2019年6月25日</p>
             </div>
         </div>
     </div>
 </div>
 
-## <i class="fa fa-film"></i> Other JHipster videos
+## <i class="fa fa-film"></i> 其他Jhipster相关视频
 
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4">

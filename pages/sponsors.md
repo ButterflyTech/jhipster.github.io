@@ -6,58 +6,58 @@ sitemap:
     priority: 0.1
     lastmod: 2017-11-29T00:00:00-00:00
 ---
-# <i class="fa fa-usd"></i> Sponsors
+# <i class="fa fa-usd"></i> 赞助
 
-JHipster uses [OpenCollective](https://opencollective.com/generator-jhipster) to gather money. This money is used to cover project expenses (like running this website) in a transparent way ([See the OpenCollective documentation](https://opencollective.com/learn-more)), and your donation will help the project live and grow successfully.
+JHipster现在通过[OpenCollective](https://opencollective.com/generator-jhipster)募捐. 这些钱公开的([See the OpenCollective documentation](https://opencollective.com/learn-more))用于支付整个项目的花费(比如运行这个网站), 你的赞助将会令这个项目长远的发展下去.
 
-Please go to our [OpenCollective page](https://opencollective.com/generator-jhipster) to become a backer or a sponsor.
+请到我们的[OpenCollective页面](https://opencollective.com/generator-jhipster) 成为一个支持者或者赞助商.
 
-## Benefits of being a backer
+## 支持者福利
 
-Backers donate $2 per month to the project, and get the following benefits:
+支持者每个月捐赠2刀, 具体的福利如下:
 
 - Visibility on the front page of [https://www.jhipster.tech](https://www.jhipster.tech) in the "backers" section (about 110,000 views/month on January, 2018).
 - Visibility on the GitHub main project page in the "backers" section (about 15,000 views/month on January, 2018).
 - "Thank you" tweet from [@java_hipster](https://twitter.com/java_hipster).
 
-## Benefits of being a bronze sponsor
+## 铜牌赞助商福利
 
-Bronze sponsors donate $100 per month to the project, and get the following benefits:
+铜牌赞助商每个月捐赠100刀, 具体的福利如下:
 
 - Visibility on the front page of [https://www.jhipster.tech](https://www.jhipster.tech) in the "sponsors" section (about 110,000 views/month on January, 2018).
 - Visibility on the GitHub main project page in the "sponsors" section (about 15,000 views/month on January, 2018).
 - "Thank you" tweet from [@java_hipster](https://twitter.com/java_hipster).
 
-## Benefits of being a silver sponsor
+## 银牌赞助商福利
 
-Silver sponsors donate $500 per month to the project, and get the following benefits:
+银牌赞助商每个月捐赠500刀, 具体的福利如下:
 
 - Same benefits as bronze sponsors (visibility on main pages, and thank you tweet).
 - The ability to create 1 "[bug bounty]({{ site.url }}/bug-bounties/)" every month, non transferable. If that bug bounty is not created by the end of the month, it is lost.
 
-## Benefits of being a gold sponsor
+## 金牌赞助商福利
 
-Gold sponsors donate $1000 per month to the project, and get the following benefits:
+金牌赞助商每个月捐赠1000刀, 具体的福利如下:
 
 - Same benefits as silver sponsors (visibility on main pages, and thank you tweet).
 - The ability to create 3 "[bug bounties]({{ site.url }}/bug-bounties/)" every month, non transferable. If all bug bounties are not created by the end of the month, the remaining ones are lost.
 - Company logos on all [https://www.jhipster.tech](https://www.jhipster.tech) page footers (about 550,000 views/month on January, 2018).
 
-## What will the project do with the money?
+## 项目资金计划
 
 As you can read in [the OpenCollective documentation](https://docs.opencollective.com), the way your money will be used will be public and totally transparent.
 
 Anyone can file an expense. If the expense makes sense for the development of the community, it will be "merged" in the ledger of our open collective by the core contributors and the person who filed the expense will be reimbursed.
 
-Money will first be used to cover direct project costs:
+资金优先用于支付直接项目成本:
 
-- [Bug bounties]({{ site.url }}/bug-bounties/)
-- Website hosting
-- Developer tooling
-- Legal protection
+- [Bug悬赏]({{ site.url }}/bug-bounties/)
+- 网站托管
+- 开发工具
+- 法律保护
 
-Then, money will be used to:
+然后, 资产将用在:
 
-- Pay for project goodies
-- Pay Meetup fees
-- Pay expenses for developer gatherings: travel & food expenses for core team meetings
+- 项目赠品
+- 聚会费用
+- 支付开发者聚会的费用：核心团队会议的交通和餐饮费用

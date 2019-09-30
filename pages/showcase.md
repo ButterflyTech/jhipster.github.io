@@ -11,9 +11,9 @@ sitemap:
 
 # <i class="fa fa-file-image-o"></i> Showcase
 
-A showcase of awesome applications built with JHipster.
+Jhipster创建的优秀应用展示.
 
-If you want your application to be featured here just submit a PR to the [website](https://github.com/jhipster/jhipster.github.io) or let us know via Twitter by mentioning the [@java_hipster](https://twitter.com/java_hipster) handle.
+如果你想在这里展示你的应用, 请提交一个PR到这个[官网仓库](https://github.com/jhipster/jhipster.github.io) 或者在Twitter[@java_hipster](https://twitter.com/java_hipster)上联系我们.
 
 <br/><br/><br/>
 
