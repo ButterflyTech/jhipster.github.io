@@ -45,12 +45,9 @@ JHipster现在通过[OpenCollective](https://opencollective.com/generator-jhipst
 
 ## 项目资金计划
 
-您可以阅读这篇文档[the OpenCollective documentation](https://docs.opencollective.com), 您捐助的资金将会公开透明的展示在这里.
-
-Anyone can file an expense. If the expense makes sense for the development of the community, it will be "merged" in the ledger of our open collective by the core contributors and the person who filed the expense will be reimbursed.
+您可以阅读这篇文档 [the OpenCollective documentation](https://docs.opencollective.com), 您捐助的资金将会公开透明的展示在这里.
 
 任何人都可以申请费用. 如果这笔费用有助于社区的发展，我们将记入在OpenCollective的账本，并报销费用。
-
 
 资金优先用于支付直接项目成本:
 

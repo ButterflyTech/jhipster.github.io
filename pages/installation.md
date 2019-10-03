@@ -9,220 +9,217 @@ sitemap:
     lastmod: 2018-08-30T08:20:00-00:00
 ---
 
-# <i class="fa fa-cloud-download"></i> Installing JHipster
+# <i class="fa fa-cloud-download"></i> 安装JHipster
 
-## Installation types
+## 安装方式
 
-We provide 4 ways of working with JHipster. If in doubt, choose our 2nd option, "Local installation with NPM":
+我们提供4种使用JHipster的方法。如有疑问，请选择我们的第二个方法: 使用NPM进行本地安装:
 
-*   [JHipster Online](https://start.jhipster.tech/) is a simple way to generate an application without installing JHipster in the first place.
-*   "Local installation with NPM" is the classical way of working with JHipster. Everything is installed on your machine, which can be a little complex to set up, but that's how most people usually work. In case of doubt, choose this installation.
-*   "Local installation with Yarn" is the same as classical "Local installation with NPM", but using [Yarn](https://yarnpkg.com/) instead of NPM. Please note that Yarn is a lot less popular than NPM in our community, so this isn't a recommended option for newcomers.
-*   The "[Docker](https://www.docker.io/)" container, which brings you a lightweight container with JHipster installed.
+*   [JHipster Online](https://start.jhipster.tech/)是一种无需安装JHipster即可生成应用程序的简单方法.
+*   "使用NPM进行本地安装"是使用JHipster的经典方法. 所有的一切都安装在您的计算机上，安装起来可能有些复杂，但这是大多数人通常的使用方式。如有疑问，请选择此安装方式。
+*   "使用Yarn进行本地安装"与经典的"使用NPM进行本地安装"相同，但是使用了[Yarn](https://yarnpkg.com/)代替NPM。但请注意，在我们的社区中，Yarn不如NPM受欢迎，因此不建议新手使用。
+*   "[Docker](https://www.docker.io/)"容器，为您提供已安装了JHipster的轻量级容器.
 
-## JHipster Online (for users wanting a simplified way to run JHipster)
+## JHipster Online (适用于希望以简单方式使用JHipster的用户)
 
-[JHipster Online](https://start.jhipster.tech/) allows you to easily generate JHipster applications, without having to install JHipster.
+[JHipster Online](https://start.jhipster.tech/), 无需安装JHipster即可轻松生成JHipster应用程序.
 
-This is intended for people trying JHipster for the first time, or who just want to have a look at what JHipster provides.
+适用于第一次尝试JHipster的用户，或者只想浏览JHipster提供的功能的用户.
 
-While it is easier to use, it is not the "full JHipster experience", and once your application is generated you will still need to follow most of the steps from the next section ("Local installation with NPM"), as you will still need Java (to run your application) and NPM (to manage your front-end code).
+尽管它更易于使用，但这并不是“完整的JHipster体验”，并且在生成应用程序后，您仍需要操作后续很多步骤（“使用NPM进行本地安装”），而且您仍然需要提供Java（运行应用程序）和NPM（管理前端代码）环境.
 
-In the future, we expect JHipster Online to provide more features, of course.
+当然，我们希望将来JHipster Online能提供更多功能.
 
-## Local installation with NPM (recommended for normal users)
+## 使用NPM进行本地安装 (推荐给普通用户)
 
-### Quick setup
+### 快速设置
 
-1.  Install Java 11. We recommend you use [AdoptOpenJDK builds](https://adoptopenjdk.net/), as they are open source and free.
-2.  Install Node.js from [the Node.js website](http://nodejs.org/) (please use an LTS 64-bit version, non-LTS versions are not supported)
-3.  Install JHipster: `npm install -g generator-jhipster`
-4.  (optional) If you want to use a module or a blueprint (for instance from the [JHipster Marketplace]({{ site.url }}/modules/marketplace/#/list)), install [Yeoman](https://yeoman.io/): `npm install -g yo`
+1.  安装Java 11. 推荐使用[AdoptOpenJDK builds](https://adoptopenjdk.net/), 开源免费.
+2.  从[Node.js官网](http://nodejs.org/)获取Node.js安装(请使用LTS 64位版本, 非LTS版本不再支持)
+3.  安装JHipster: `npm install -g generator-jhipster`
+4.  (可选) 如果你需要使用模块和模板 (例如从[JHipster Marketplace]({{ site.url }}/modules/marketplace/#/list)获取), 安装[Yeoman](https://yeoman.io/): `npm install -g yo`
 
-Now that JHipster is installed, your next step is to [create an application]({{ site.url }}/creating-an-app/)
+现在已经安装了JHipster，下一步是[创建一个应用程序]({{ site.url }}/creating-an-app/)
 
-### Optional installations
+### 可选安装
 
-1. Install a Java build tool.
-    *   Whether you choose to use [Maven](http://maven.apache.org/) or [Gradle](http://www.gradle.org/), you normally don't have to install anything, as JHipster will automatically install the [Maven Wrapper](https://github.com/takari/maven-wrapper) or the [Gradle Wrapper](http://gradle.org/docs/current/userguide/gradle_wrapper.html) for you.
-    *   If you don't want to use those wrappers, go to the official [Maven website](http://maven.apache.org/) or [Gradle website](http://www.gradle.org/) to do your own installation.
-2.  Install Git from [git-scm.com](http://git-scm.com/). We recommend you also use a tool like [SourceTree](http://www.sourcetreeapp.com/) if you are starting with Git.
-    * JHipster will try to commit your project to Git, if it is installed.
-    * The [JHipster upgrade sub-generator]({{ site.url }}/upgrading-an-application/) requires to have Git installed.
+1. 安装Java构建工具.
+    *   无论你选择[Maven](http://maven.apache.org/)还是[Gradle](http://www.gradle.org/), 通常都不需要额外安装任何东西, 因为JHipster会自动为您安装[Maven Wrapper](https://github.com/takari/maven-wrapper)或[Gradle Wrapper](http://gradle.org/docs/current/userguide/gradle_wrapper.html).
+    *   如果您不想使用这些包装器, 请访问[Maven官方网站](http://maven.apache.org/)官方网站或[Gradle官方网站](http://www.gradle.org/)自行安装.
+2.  从[git-scm.com](http://git-scm.com/)安装Git. 如果您刚接触Git，我们建议您也可以使用[SourceTree](http://www.sourcetreeapp.com/)之类的工具.
+    * JHipster将尝试将您的项目提交到Git（如果已安装).
+    * [升级JHipster子生成器]({{ site.url }}/upgrading-an-application/)需要Git已安装。
 
-### Additional information
+### 附加信息
 
-JHipster uses [Yeoman](http://yeoman.io/) for code generation.
-To find more information, tips and help, please have a look at [the Yeoman "getting starting" guide](http://yeoman.io/learning/index.html) before [submitting a bug](https://github.com/jhipster/generator-jhipster/issues?state=open).
+JHipster使用[Yeoman](http://yeoman.io/)实现代码自动生成。要查找更多信息，技巧和帮助，或在[提交错误](https://github.com/jhipster/generator-jhipster/issues?state=open)之前, 请查看[Yeoman入门指南](http://yeoman.io/learning/index.html)。
+项目的生成配置将存储在自动生成的`.yo-rc.json`文件中，因此强烈建议不要在HOME目录中生成JHipster项目。如果这样做，您将无法在子目录中生成另一个项目。要解决此问题，只需删除`.yo-rc.json`文件即可解决。
 
-The configuration will be stored in a generated `.yo-rc.json` file, so it is **strongly** recommended not to generate a JHipster project in your HOME directory. If you did it, you won't be able to generate another project in a sub directory. To solve it, simply delete the `.yo-rc.json` file.
+## 使用Yarn本地安装（替代NPM）
 
-## Local installation with Yarn (alternative to NPM)
+### 快速设置
 
-### Quick setup
+与使用NPM的过程类似，但有两个区别：
 
-This is the same procedure as using NPM, with two differences:
+1. 无需在步骤3中升级NPM，而是从[Yarn官网](https://yarnpkg.com/en/docs/install)安装Yarn 
+2. 使用 `yarn global add`代替`npm install -g`, 例如:
+    * 安装Yeoman, 输入: `yarn global add yo`
+    * 安装JHipster, 输入: `yarn global add generator-jhipster`
 
-1. Instead of upgrading NPM in step 3, install Yarn from [the Yarn website](https://yarnpkg.com/en/docs/install)
-2. Use `yarn global add` instead of `npm install -g`, for example:
-    * To install Yeoman, type: `yarn global add yo`
-    * To install JHipster, type: `yarn global add generator-jhipster`
+### 故障排除
 
-### Troubleshooting
+如果在全局使用Yarn时遇到问题，请确保PATH中包括了`$HOME/.config/yarn/global/node_modules/.bin`路径.
 
-If you have problems using Yarn globally, be sure to have `$HOME/.config/yarn/global/node_modules/.bin` in your path.
+在Mac或Linux: ```export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"```
 
-On Mac or Linux: ```export PATH="$PATH:`yarn global bin`:$HOME/.config/yarn/global/node_modules/.bin"```
+## Docker安装（仅适用于高级用户）
 
-## Docker installation (for advanced users only)
+请注意：此Docker映像用于在容器内运行JHipster生成器。它和由JHipster将生成的[Docker和Docker Compose配置]({{ site.url }}/docker-compose/)完全不同，其目的主要是在容器中运行生成的应用。
 
-_Please note: this Docker image is for running the JHipster generator inside a container. It's completely different from the [Docker and Docker Compose configurations]({{ site.url }}/docker-compose/) that JHipster will generate, which goal is to run your generated application inside a container_
+### 描述
 
-### Information
+JHipster具有一个定制的[Dockerfile](https://github.com/jhipster/generator-jhipster/blob/master/Dockerfile)，该文件提供了[Docker](https://www.docker.io/)镜像。
 
-JHipster has a specific [Dockerfile](https://github.com/jhipster/generator-jhipster/blob/master/Dockerfile), which provides a [Docker](https://www.docker.io/) image.
+自动构建的Docker镜像可以在这里找到：[https://hub.docker.com/r/jhipster/jhipster/](https://hub.docker.com/r/jhipster/jhipster/)
 
-It makes a Docker "Automated build" that is available on: [https://hub.docker.com/r/jhipster/jhipster/](https://hub.docker.com/r/jhipster/jhipster/)
+该映像将允许您在Docker中运行JHipster。
 
-This image will allow you to run JHipster inside Docker.
+### 环境准备
 
-### Prerequisites
+这取决于您的操作系统。
 
-This depends on your operating system.
+1.  **Linux:** Linux支持开箱即用的Docker。您只需要遵循[Docker](https://docs.docker.com/installation/#installation)网站上的教程即可。
+2.  **Mac & Windows:** 安装[Docker Toolbox](https://www.docker.com/docker-toolbox)即可轻松安装Docker。
 
-1.  **Linux:** Linux supports Docker out-of-box. You just need to follow the tutorial on the [Docker](https://docs.docker.com/installation/#installation) website.
-2.  **Mac & Windows:** install the [Docker Toolbox](https://www.docker.com/docker-toolbox) to get Docker installed easily.
+由于生成的应用文件位于共享文件夹中，因此如果您停止Docker容器，它们将不会被删除。但是，如果您不希望Docker在每次启动容器时都重新下载所有Maven和NPM依赖项，您应该保存容器状态或者将外部路径挂载进容器。
 
-As the generated files are in your shared folder, they will not be deleted if you stop your Docker container. However, if you don't want Docker to keep downloading all the Maven and NPM dependencies every time you start the container, you should commit its state or mount a volume.
+<div class="alert alert-warning"><i>注意: </i>
 
-<div class="alert alert-warning"><i>Warning: </i>
-
-Based on your OS, your <code>DOCKER_HOST</code> will differ. On Linux, it will be simply your localhost.
-For Mac/Windows, you will have to obtain the IP using following command: <code>docker-machine ip default</code>
+根据您的操作系统，您的<code>DOCKER_HOST</code>将有所不同。在Linux上，它将只是您的本地主机地址。对于Mac / Windows，必须使用以下命令获取IP：<code>docker-machine ip default</code>
 
 </div>
 
-<div class="alert alert-info"><i>Tip: </i>
+<div class="alert alert-info"><i>提示: </i>
 
-Kitematic is an easy-to-use graphical interface provided with the Docker Toolbox, which will makes this installation a lot easier.
+Kitematic是Docker Toolbox提供简化使用的图形界面，这将使安装过程更加容易。
 
 </div>
 
-On Linux, you might need to run the `docker` command as root user if your user is not part of docker group. It's a good idea to add your user to docker group so that you can run docker commands as a non-root user. Follow the steps on [http://askubuntu.com/a/477554](http://askubuntu.com/a/477554) to do so.
+在Linux上，如果您的用户不属于docker组，则可能需要以root用户身份运行docker命令。最好将您的用户添加到docker组，以便您可以以非root用户身份运行docker命令。请按照[http://askubuntu.com/a/477554](http://askubuntu.com/a/477554)上的步骤进行操作。
 
 ### Usage on Linux/Mac Windows (using Docker Toolbox)
 
-#### Pull the image
+#### 拉取镜像
 
-Pull the latest JHipster Docker image:
+拉取最新的Jhipster Docker镜像：
 
 `docker image pull jhipster/jhipster`
 
-Pull the development JHipster Docker image:
+拉取开发版本的JHipster Docker镜像：
 
 `docker image pull jhipster/jhipster:master`
 
-You can see all tags [here](https://hub.docker.com/r/jhipster/jhipster/tags/)
+您可以在[这里](https://hub.docker.com/r/jhipster/jhipster/tags/)看到所有的容器标签
 
-#### Run the image
+#### 运行镜像
 
-<div class="alert alert-warning"><i>Warning: </i>
+<div class="alert alert-warning"><i>提醒: </i>
 
-If you are using Docker Machine on Mac or Windows, your Docker daemon has only limited access to your OS X or Windows file system. Docker Machine tries to auto-share your /Users (OS X) or C:\Users\&lt;username&gt; (Windows) directory. So you have to create the project folder under these directory to avoid any volume mounting issues.
+如果在Mac或Windows上使用Docker Machine，则Docker守护程序对OS X或Windows文件系统仅具有有限的访问权限。Docker Machine尝试自动共享您的"/Users"（OS X）或"C\Users\[用户名]"（Windows）目录。因此，您必须在这些目录下创建项目文件夹，避免因为卷挂载导致的任何问题。
 
 </div>
 
-
-Create a "jhipster" folder in your home directory:
+在您的主目录中创建一个“ jhipster”文件夹：
 
 `mkdir ~/jhipster`
 
-Run the Docker image, with the following options:
+使用以下选项运行这个Docker镜像:
 
-*   The Docker "/home/jhipster/app" folder is shared to the local "~/jhipster" folder
-*   Forward all ports exposed by Docker (8080 for the Java application, 9000 for BrowserSync, 3001 for the BrowserSync UI)
+*   将容器的"/home/jhipster/app"文件夹路径共享到本地”〜/jhipster”路径
+*   转发Docker公开的所有端口（Java应用程序为8080，BrowserSync为9000，BrowserSync UI为3001）
 
 `docker container run --name jhipster -v ~/jhipster:/home/jhipster/app -v ~/.m2:/home/jhipster/.m2 -p 8080:8080 -p 9000:9000 -p 3001:3001 -d -t jhipster/jhipster`
 
-<div class="alert alert-info"><i>Tip: </i>
+<div class="alert alert-info"><i>提醒: </i>
 
-If you have already started the container once before, you do not need to run the above command, you can simply start/stop the existing container.
+提示：如果您以前已经启动过容器，则无需运行上述命令，只需启动/停止现有容器即可。
 
 </div>
 
-#### Check if the container is running
+#### 检查容器是否正在运行
 
-To check that your container is running, use the command `docker container ps`:
+要检查您的容器是否正在运行，请使用命令： `docker container ps`:
 
     CONTAINER ID    IMAGE               COMMAND                 CREATED         STATUS          PORTS                                                       NAMES
     4ae16c0539a3    jhipster/jhipster   "tail -f /home/jhipst"  4 seconds ago   Up 3 seconds    0.0.0.0:9000-3001->9000-3001/tcp, 0.0.0.0:8080->8080/tcp    jhipster
 
-#### Common operations
+#### 常用操作
 
-*   To stop the container execute: `docker container stop jhipster`
-*   And to start again, execute: `docker container start jhipster`
+*  停止容器执行: `docker container stop jhipster`
+*  并再次启动，执行: `docker container start jhipster`
 
-In case you update the Docker image (rebuild or pull from the Docker hub), it's better to remove the existing container, and run the container all over again. To do so, first stop the container, remove it and then run it again:
+如果您需要更新Docker镜像（重建或从Docker Hub拉取），最好删除现有容器，然后重新运行该容器。为此，需要首先停止容器，将其删除，然后再次运行：
 
 1.  `docker container stop jhipster`
 2.  `docker container rm jhipster`
 3.  `docker image pull jhipster/jhipster`
 4.  `docker container run --name jhipster -v ~/jhipster:/home/jhipster/app -v ~/.m2:/home/jhipster/.m2 -p 8080:8080 -p 9000:9000 -p 3001:3001 -d -t jhipster/jhipster`
 
-### Accessing the container
+### 进入容器
 
-<div class="alert alert-warning"><i>Warning: </i>
+<div class="alert alert-warning"><i>提醒: </i>
 
-On Windows, you need to execute the Docker Quick Terminal as Administrator to be able to create symlinks during the `npm install` step.
-
+在Windows上，您需要以管理员身份执行Docker Quick Terminal，以便能够在`npm install`步骤中创建符号链接。
 </div>
 
-The easiest way to log into the running container is by executing following command:
+最简单方法是登录正在运行的容器执行以下命令：
 
 `docker container exec -it <container_name> bash`
 
-If you copy-pasted the above command to run the container, notice that you have to specify `jhipster` as the container name:
+请注意：如果在容器中复制粘贴了以上命令运行，必须将容器名称指定为`jhipster`：
 
 `docker container exec -it jhipster bash`
 
-You will log in as the "jhipster" user.
+您将以“ jhipster”用户身份登录。
 
-If you want to log in as "root", as the `sudo` command isn't available in Ubuntu Xenial, you need to run:
+如果您想以"root"身份登录，但因为`sudo`命令在Ubuntu Xenial中是不可用，则需要运行：
 
 `docker container exec -it --user root jhipster bash`
 
-### Your first project
+### 您的第一个项目
 
-You can then go to the /home/jhipster/app directory in your container, and start building your app inside Docker:
+然后，您可以转到容器中的/home/jhipster/app目录，并开始在Docker内部构建应用程序：
 
 `cd /home/jhipster/app`
 
 `jhipster`
 
-<div class="alert alert-info"><i>Tip: </i>
+<div class="alert alert-info"><i>提醒: </i>
 
-If you prefer using Yarn, you can use <code>jhipster --yarn</code>, to use Yarn instead of NPM.
+提示：如果您更喜欢使用Yarn，则可以使用<code>jhipster --yarn</code>来使用Yarn来代替NPM。
 
 </div>
 
-Once your application is created, you can run all the normal gulp/bower/maven commands, for example:
+创建应用程序后，您可以运行gulp/bower/maven所有常规命令，例如：
 
 `./mvnw`
 
-**Congratulations! You've launched your JHipster app inside Docker!**
+**恭喜！您已经在Docker中启动了JHipster应用！**
 
-On your host machine, you should be able to:
+在宿主机上，您应该能够：
 
-*   Access the running application at `http://DOCKER_HOST:8080`
-*   Get all the generated files inside your shared folder
+*   通过`http://DOCKER_HOST:8080`访问正在运行的应用程序
 
-<div class="alert alert-warning"><i>Warning: </i>
+*   在共享文件夹中获取所有生成的文件
+
+<div class="alert alert-warning"><i>注意: </i>
     By default, Docker is not installed inside the <code>jhipster/jhipster</code> image.
+    默认情况下，<code>jhipster/jhipster</code>映像中未安装Docker。
     <br/>
-    So you won't be able to:
+    因此，您将无法：:
     <ul>
-        <li>use the docker-compose files</li>
-        <li>build a Docker image with the docker daemon (Maven goal: <code>jib:dockerBuild</code> or Gradle task: <code>jibDockerBuild</code>)</li>
+        <li>使用docker-compose文件</li>
+        <li>使用Docker构建Docker镜像（Maven任务：<code>jib:dockerBuild</code>或Gradle任务：<code>jibDockerBuild</code>）</li>
     </ul>
-    However, you will be able to use [jib](https://github.com/GoogleContainerTools/jib)'s daemonless mode which can build a docker image and push it to a registry without access to a docker daemon (Maven goal: <code>jib:build</code> or Gradle task: <code>jibBuild</code>). But you will need to setup credentials to the docker registry as a pre-requisite of building the app. See the [Jib plugin configuration documentations](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#configuration) for more details.
+    但是，您能够使用[jib](https://github.com/GoogleContainerTools/jib)的无守护程序模式，该模式可以构建docker镜像并将其推送到仓库，而无需访问docker守护程序（Maven任务：<code>jib:build</code>或Gradle任务：<code>jibBuild</code>）。但是作为构建应用程序的先决条件，您将需要先设置Docker仓库凭证信息。有关更多详细信息，请参见[Jib插件配置文档(https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#configuration)。
 </div>

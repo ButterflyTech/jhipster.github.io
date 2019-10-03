@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Configuring Netbeans
+title: 配置Netbeans
 permalink: /configuring-ide-netbeans/
 redirect_from:
   - /configuring_ide_netbeans.html
@@ -9,17 +9,17 @@ sitemap:
     lastmod: 2016-08-20T18:40:00-00:00
 ---
 
-# <i class="fa fa-keyboard-o"></i> Configuring Netbeans
+# <i class="fa fa-keyboard-o"></i> 配置Netbeans
 
-Importing your JHipster application in Netbeans is straightforward.
+在Netbeans中导入JHipster应用程序非常简单。
 
-## 1. Open your project
+## 1. 打开你的项目
 
-- Select File -> Open Project
-- Browse and select your project's folder
+- 选择 File -> Open Project
+- 浏览并选择项目的文件夹
 
 ![Open]({{ site.url }}/images/configuring_ide_netbeans_1.png)
 
-**That's All** : To run your project, just do a right-click on the Application class (at the root of the package hierarchy) and select "Run File".
+**就这样**：要运行您的项目，只需右键单击Application类（位于包层次结构的根目录），然后选择“Run File”。
 
 ![Open]({{ site.url }}/images/configuring_ide_netbeans_2.png)
