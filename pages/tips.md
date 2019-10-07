@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tips'n tricks
+title: 使用技巧
 permalink: /tips/
 redirect_from:
   - /tips.html
@@ -9,11 +9,11 @@ sitemap:
     lastmod: 2019-01-29T08:40:00-00:00
 ---
 
-# <i class="fa fa-cogs"></i> Tips'n tricks
+# <i class="fa fa-cogs"></i> 使用技巧
 
-This section contains __user-submitted tips'n tricks__ on using JHipster.
+本部分包含使用Jhipster __用户提交的使用技巧__
 
-_If you want to contribute, don't hesitate to send us a Pull Request with your tips on our [GitHub repository](https://github.com/jhipster/jhipster.github.io)._
+如果您想做出贡献，请随时在我们的[GitHub仓库](https://github.com/jhipster/jhipster.github.io)中向我们提交您的使用技巧。
 
 1. [Create a static Swagger API documentation]({{ site.url }}/tips/008_tips_static_swagger_docs.html)
 1. [Using Bootswatch themes]({{ site.url }}/tips/009_tips_using_bootswatch_themes.html)

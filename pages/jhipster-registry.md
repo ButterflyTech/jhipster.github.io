@@ -1,37 +1,37 @@
 ---
 layout: default
-title: JHipster Registry
+title: JHipster注册中心
 permalink: /jhipster-registry/
 sitemap:
     priority: 0.7
     lastmod: 2019-02-01T00:00:00-00:00
 ---
 
-# <i class="fa fa-dashboard"></i> The JHipster Registry
+# <i class="fa fa-dashboard"></i> JHipster注册中心
 
 ## Overview
 
-The JHipster Registry is a runtime application, provided by the JHipster team. Like the JHipster generator, it is an Open Source, Apache 2-licensed application, and its source code is available on GitHub under the JHipster organization at [jhipster/jhipster-registry](https://github.com/jhipster/jhipster-registry).
+JHipster注册中心是JHipster团队提供的应用程序。与JHipster生成器一样，它是一个开源，Apache 2-licensed应用程序，其源代码在JHipster组织的GitHub上可用：[jhipster/jhipster-registry](https://github.com/jhipster/jhipster-registry)
 
-The JHipster Registry has three main purposes:
+JHipster注册中心具有三个主要功能：
 
-- It is a an [Eureka server](https://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html), that serves as a discovery server for applications. This is how JHipster handles routing, load balancing and scalability for all applications.
-- It is a [Spring Cloud Config server](https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html), that provide runtime configuration to all applications.
-- It is an administration server, with dashboards to monitor and manage applications.
+- 它是一个[Eureka服务](https://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html)，用作应用程序的发现服务。这就是JHipster处理所有应用程序的路由，负载均衡和可伸缩性的方式。
+- 它是一个[Spring Cloud配置服务](https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html)，为所有应用程序运行时提供配置。
+- 它还是一台管理服务器，具有用于监视和管理应用程序的仪表板。
 
-All those features are packaged into one convenient application with a modern Angular-based user interface.
+所有这些功能都通过基于Angular的现代用户界面，打包到一个便利的应用程序中。
 
 ![]({{ site.url }}/images/jhipster-registry-animation.gif)
 
-## Summary
+## 目录
 
-1. [Installation](#installation)
-2. [Service discovery with Eureka](#eureka)
-3. [Application configuration with Spring Cloud Config](#spring-cloud-config)
-4. [Administration dashboards](#dashboards)
-5. [Securing the JHipster Registry](#security)
+1. [安装](#installation)
+2. [使用Eureka进行服务发现](#eureka)
+3. [使用Spring Cloud Config进行应用程序配置](#spring-cloud-config)
+4. [管理仪表板](#dashboards)
+5. [保护JHipster注册中心](#security)
 
-## <a name="installation"></a> Installation
+## <a name="installation"></a> 安装
 
 ### Spring profiles
 

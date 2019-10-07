@@ -1,35 +1,35 @@
 ---
 layout: default
-title: Doing microservices with JHipster
+title: 使用JHipster进行微服务
 permalink: /microservices-architecture/
 sitemap:
     priority: 0.7
     lastmod: 2016-03-10T00:00:00-00:00
 ---
 
-# <i class="fa fa-sitemap"></i> Doing microservices with JHipster
+# <i class="fa fa-sitemap"></i> 使用JHipster进行微服务
 
-## <a name="microservices_vs_monolithic"></a> Microservices vs Monolithic architecture
+## <a name="microservices_vs_monolithic"></a> 微服务架构与整体架构
 
-The first question JHipster will ask you is the kind of application you want to generate. You have the choice between two architecture styles:
+生成应用时JHipster问您的第一个问题是您要生成的应用程序类型。您可以在两种架构之间进行选择：
 
-- A "monolithic" architecture uses a single, one-size-fits-all application, which contains both the front-end code, and the back-end Spring Boot code.
-- A "microservices" architecture splits the front-end and the back-end, so that it's easier for your application to scale and survive infrastructure issues.
+- "monolithic"架构使用一个单独的，所有组件集一体的应用程序，其中包含前端代码和后端Spring Boot代码。
+- "微服务"架构将前端和后端分开，因此您的应用程序可以更轻松地扩展和解决基础架构问题。
 
-A "monolithic" application is much easier to work on, so if you don't have any specific requirements, this is the option we recommend, and our default option.
+"monolithic"应用程序更易于操作，因此，如果您没有任何特定要求，则建议使用此选项，并且将其作为默认选项。
 
-## <a name="overview"></a> Microservices architecture overview
+## <a name="overview"></a> 微服务架构概述
 
-The JHipster microservices architecture works in the following way:
+JHipster微服务架构以以下方式工作：
 
- * A [gateway]({{ site.url }}/api-gateway/) is a JHipster-generated application (using application type `microservice gateway` when you generate it) that handles Web traffic, and serves an Angular/React application. There can be several different gateways, if you want to follow the [Backends for Frontends pattern](https://www.thoughtworks.com/insights/blog/bff-soundcloud), but that's not mandatory.
- * [Traefik]({{ site.url }}/traefik/) is a modern HTTP reverse proxy and load balancer that can work with a gateway.
- * The [JHipster Registry]({{ site.url }}/jhipster-registry/) is a runtime application on which all applications registers and get their configuration from. It also provides runtime monitoring dashboards.
- * [Consul]({{ site.url }}/consul/) is a service discovery service, as well as a key/value store. It can be used as an alternative to the JHipster Registry.
- * [JHipster UAA]({{ site.url }}/using-uaa/) is a JHipster-based User Authentication and Authorization system, which uses the OAuth2 protocol.
- * [Microservices]({{ site.url }}/creating-microservices/) are JHipster-generated applications (using application type `microservice application` when you generate them), that handle REST requests. They are stateless, and several instances of them can be launched in parallel to handle heavy loads.
- * The [JHipster Console](https://github.com/jhipster/jhipster-console) is a monitoring & alerting console, based on the ELK stack.
+ * [gateway]({{ site.url }}/api-gateway/)是JHipster生成的应用程序(生成时选择`microservice application``microservice gateway`)，该应用程序处理Web流量，并为Angular/React应用程序提供服务。如果您要遵循[Backends for Frontends模式](https://www.thoughtworks.com/insights/blog/bff-soundcloud)，则可以存在几种不同的网关，但这不是强制性的。
+ * [Traefik]({{ site.url }}/traefik/)是可以与网关一起使用的现代HTTP反向代理和负载均衡器。
+ * [JHipster Registry]({{ site.url }}/jhipster-registry/)是一个所有应用程序在运行时候在其注册并从中获取其配置的服务。它还提供了运行时监视仪表板。
+ * [Consul]({{ site.url }}/consul/)是服务发现服务以及提供键/值存储。它可以用作JHipster Registry的替代服务。
+ * [JHipster UAA]({{ site.url }}/using-uaa/)是基于JHipster的用户身份验证和授权系统，它使用OAuth2协议。
+ * [Microservices]({{ site.url }}/creating-microservices/)是JHipster生成的应用程序（生成时选择`microservice application`），用于处理REST请求。它们是无状态的，可以并行启动它们的多个实例来达到负载均衡的目的。
+ * [JHipster Console](https://github.com/jhipster/jhipster-console)是基于ELK Stack的监控和告警控制台。
 
-In the diagram below, the green components are specific to your application and the blue components provide its underlying infrastructure.
+在下图中，绿色组件特定于您的应用程序，蓝色组件提供了其基础结构。
 
 <img src="{{ site.url }}/images/microservices_architecture_2.png" alt="Diagram" style="width: 930px; height: 558px"/>

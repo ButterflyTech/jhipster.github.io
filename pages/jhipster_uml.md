@@ -11,49 +11,48 @@ sitemap:
 
 # <i class="fa fa-magic"></i> JHipster-UML
 
-Please note that this project is deprecated and shouldn't be used anymore.
+请注意，该项目已过时，不再使用。
 
-Instead, we suggest you use the JDL export feature of this project to export your XMI files to a JDL file that you can use and make models of your entities with JDL Studio.
+替代方案，我们建议您使用此项目的JDL导出功能将XMI文件导出到可以使用的JDL文件，并通过JDL Studio建立实体模型。
 
-To learn more about the JDL, head [here]({{ site.url }}/profiles/).
-
+要了解有关JDL的更多信息，请前往[此处]({{ site.url }}/profiles/)。
 ***
 
-JHipster-UML is a JHipster sub-project that can be used as a replacement to using the [entity sub-generator]({{ site.url }}/creating-an-entity/). The idea is that it is much easier to [manage relationships]({{ site.url }}/managing-relationships/) using a visual tool than with the classical Yeoman questions and answers.
+JHipster-UML是一个JHipster子项目，可以用来代替[实体子生成器]({{ site.url }}/creating-an-entity/)。这个想法是，使用视觉工具来[管理关系]({{ site.url }}/managing-relationships/)比使用经典的Yeoman问答更容易。
 
-The JHipster-UML project is [available on GitHub](https://github.com/jhipster/jhipster-uml/), it is an Open Source project like JHipster (Apache 2.0 licence). If you like this project, don't forget to give us a star on GitHub!
+JHipster-UML项目 [可在GitHub上获得](https://github.com/jhipster/jhipster-uml/)，它是一个开源项目，类似JHipster（Apache 2.0许可证）。如果您喜欢这个项目，别忘了在GitHub上给我们加星！
 
-Here's what's covered on this page:
+这是此页面上介绍的内容：
 
-1. [Introduction](#introduction)
-2. [Issues and bugs](#issues)
-3. [Installation](#install)
-4. [How to use JHipster-UML](#howtouse)  
-    4.1. [The UML file](#umlfile)  
-    4.2. [Use JHipster-UML](#usejuml)  
-    4.3. [What's generated](#whatsgenerated)  
-    4.4. [JHipster notes](#jhipsternotes)  
-    4.5. [Reserved words](#reservedwords)  
-5. [Examples](#examples)  
+1. [介绍](#introduction)
+2. [问题与错误](#issues)
+3. [安装](#install)
+4. [如何使用JHipster-UML](#howtouse)  
+    4.1. [UML文件](#umlfile)  
+    4.2. [使用JHipster-UML](#usejuml)  
+    4.3. [生成了什么](#whatsgenerated)  
+    4.4. [JHipster笔记](#jhipsternotes)  
+    4.5. [保留字](#reservedwords)  
+5. [示例](#examples)  
     5.1. [Modelio](#modelioexample)  
     5.2. [UML Designer](#umldesignerexample)  
     5.3. [GenMyModel](#genmymodelexample)  
-    5.4. [Other editors](#othereditors)  
-    5.5. [Enumerations](#enumerationexamples)  
-    5.6. [Table names](#tablenames)  
-    5.7. [Required relationships](#requiredrels)  
-6. [Testing](#testing-juml)
-7. [Contributing: issues and enhancements](#contributing)  
-    7.1. [Parser modifications](#parsermodifications)
-8. [Annexes](#annexes)
+    5.4. [其他编辑器](#othereditors)  
+    5.5. [枚举](#enumerationexamples)  
+    5.6. [表名](#tablenames)  
+    5.7. [必要的关系](#requiredrels)  
+6. [测试](#testing-juml)
+7. [贡献：问题和提升](#contributing)  
+    7.1. [解析器修改](#parsermodifications)
+8. [附录](#annexes)
 
 ***
 
-# <a name="introduction"></a>Introduction
+# <a name="introduction"></a>介绍
 
-JHipster-UML is an alternative to the usual Q&A as it offers you the possibility to use a UML editor to create a diagram that will be parsed by JHipster-UML.
+JHipster-UML是常用的问答式实体生成器替代方法，因为它使您可以使用UML编辑器创建将由JHipster-UML解析的图。
 
-Here is a list of the editors we support:
+这是我们支持的编辑器列表：
 
   - [Modelio](https://www.modeliosoft.com/);
   - [UML Designer](http://www.umldesigner.org/);
@@ -61,30 +60,29 @@ Here is a list of the editors we support:
 
 ***
 
-# <a name="issues"></a>Issues and bugs
+# <a name="issues"></a>问题与错误
 
-JHipster-UML is [available on GitHub](https://github.com/jhipster/jhipster-uml), and follows the same [contributing guidelines as JHipster](https://github.com/jhipster/generator-jhipster/blob/master/CONTRIBUTING.md).
+JHipster-UML[在GitHub上可用](https://github.com/jhipster/jhipster-uml)，并[遵循与JHipster相同的贡献准则](https://github.com/jhipster/generator-jhipster/blob/master/CONTRIBUTING.md)。
 
-Please use our project for submitting issues and Pull Requests:
+请使用我们的项目提交问题和Pull Requests：
 
 - [JHipster-UML issue tracker](https://github.com/jhipster/jhipster-uml/issues)
 - [JHipster-UML Pull Requests](https://github.com/jhipster/jhipster-uml/pulls)
 
-When submitting anything, you must be as precise as possible:
-  - **One posted issue must only have one problem** (or one demand/question);
-  - Pull requests are welcome, but the commits must be 'atomic' to really be understandable.
+提交任何内容时，您都必须尽可能精确：
+  - **一个isuue必须只包含一个问题**  (一个需求或一个问题);
+  - 欢迎Pull requests，但是提交日志必须简洁明了，具有’原子’可读性。
 
+请注意，使用JHipster-UML（或JHipster）可能会很麻烦（必须安装一些工具才能不会出现任何问题，真正使用Node环境）。如果您在Windows上遇到问题，此[链接](https://gist.github.com/nullivex/7115612)可能会有所帮助。
+    
+在Windows上可能遇到的另一个问题是[这个](https://stackoverflow.com/questions/30344858/node-script-executable-not-working-on-mac-env-node-r-no-such-file-or-directo#answer-30349952)。该链接提供了解决此问题的解决方案。
 
-Please note that using JHipster-UML (or JHipster) might be troublesome (one has to install some tools to really be able to use the Node environment without any issue). This [link](https://gist.github.com/nullivex/7115612) may help if you encounter an issue on Windows.
-
-Another issue that can be encountered on Windows is [this one](https://stackoverflow.com/questions/30344858/node-script-executable-not-working-on-mac-env-node-r-no-such-file-or-directo#answer-30349952). The link provides a solution to fix that if such a thing happens.
-
-Finally, an issue has been reported from a Windows user using Git Bash. The JHipster generator's questions (from InquirerJS) could not work (the user is stuck when answering the questions). You might want to use Powershell or another shell when using JHipster UML (or JHipster).
+最后，Windows用户使用Git Bash报告的一个问题。JHipster生成器的问题（来自InquirerJS），无法正常工作（用户在回答问题时陷入困境）。使用JHipster UML（或JHipster）时，可能要使用Powershell或其他Shell。
 
 ***
 
-# <a name="install"></a>Installation
-To install JHipster UML simply use the command:
+# <a name="install"></a>安装
+要安装JHipster UML，只需使用以下命令：
 
  ```
    npm install -g jhipster-uml
@@ -92,7 +90,7 @@ To install JHipster UML simply use the command:
    yarn global add jhipster-uml
  ```
 
-If, however, you don't want to install the latest version globally because it doesn't match your version of the generator (see below) or if you want it contained locally, use this command instead:
+但是，如果您不希望在全局安装最新版本，因为它与您的生成器版本不匹配（请参见下文），或者您希望仅在当前目录安装，请使用以下命令：
 
   ```
     npm install jhipster-uml --save-dev
@@ -100,34 +98,32 @@ If, however, you don't want to install the latest version globally because it do
     yarn add jhipster-uml --dev
   ```
 
-If you want the 'bleeding edge' (almost perfectly safe to use) version, you can clone our git repo from [our GitHub project](https://github.com/jhipster/jhipster-uml):
+如果您想要一个“前卫”的（几乎完全可以安全使用）版本，则可以从[我们GitHub项目](https://github.com/jhipster/jhipster-uml)中克隆git repo：
 
-  `git clone https://github.com/jhipster/jhipster-uml.git` for HTTPS
+  `git clone https://github.com/jhipster/jhipster-uml.git` 用于HTTPS
 
-  `git clone git@github.com:jhipster/jhipster-uml.git` for SSH
+  `git clone git@github.com:jhipster/jhipster-uml.git` 用于SSH
 
 
-JHipster UML is a tool that _can_ be used with the JHipster's generator. If you're using the generator before v3.0.0, then you must use JHipster UML v1.6.5 (latest patch release). Otherwise, using v2.0.0+ is the choice for v3.0.0+ of the generator.
+JHipster UML是 _可以_ 与JHipster的生成器一起使用的工具。如果您使用的是v3.0.0之前的生成器，则必须使用JHipster UML v1.6.5（最新修补版本）。否则，使用v2.0.0+是生成器v3.0.0+的选择。
 
 ***
 
-# <a name="howtouse"></a>How to use it
-JHipster-UML is quite easy to use, you only need a class diagram exported in XMI and JHipster-UML will parse it to create your entities.
+# <a name="howtouse"></a>如何使用它
+JHipster-UML非常易于使用，您只需要在XMI中导出一个类图，JHipster-UML就会对其进行解析以创建您的实体。
 
-
-## <a name="umlfile"></a>The UML file
+## <a name="umlfile"></a>UML文件
 
 The class diagram should modelize the entities of your JHipster application domain, thus you have restrictions, you have to follow the methodology.
+类图应该对JHipster应用程序域的实体进行建模，因此存在一些限制，必须遵循该方法。
 
-
-### Entities
-Each entity is represented by a class, its fields are the class' attributes. An attribute must have a type supported by JHipster, otherwise it won't work. To have JHipster supported types like “BigDecimal”, “LocalDate”..., you can create a _PrimitiveType_ or a _DataType_ for it.
-You can look at the tables with all the types supported by JHipster and the validations you can use for each [here](#annexes).
+### 实体
+每个实体都由一个类表示，其字段是该类的属性。属性必须具有JHipster支持的类型，否则它将不起作用。要使JHipster支持“BigDecimal”，“LocalDate”…等类型，可以为其创建 _PrimitiveType_ 或 _DataType_。您可以在[此处](#annexes)查看具有JHipster支持的所有类型的表格以及可用于每种类型的验证方式。
 
 ![Book Entity]({{ site.url }}/images/jhipsteruml_book_datatype.png)
 
 Here is an example of a properly created class for JHipster. We have the attributes _publicationDate_ and price set with the types _BigDecimal_ and _LocalDate_ we created as _DataType._
-
+这是为JHipster正确创建的类的示例。具有属性 _publicationDate_ 和 _price_，它们的类型为 _BigDecimal_ 和 _LocalDate_，我们将其创建为 _DataType。_
 Note that you don't need to capitalize type names (**except for composed names like BigDecimal**, JHipster-UML capitalizes simple names).
 
 

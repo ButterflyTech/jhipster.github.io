@@ -47,14 +47,9 @@ sitemap:
 
 为了可以正常获得赏金, 你必须:
 
-- 创建一个拉取请求，用“$$ bug-bounty $$”标签修复票证.
-- Create a Pull Request that fixes a ticket with the "\$\$ bug-bounty \$\$" label.
-- In order to close the ticket automatically, you must have one commit message with the `Fix` keyword. For example, `Fix #1234` to close ticket `#1234`.
-- That Pull Request must be merged by someone from the core team. If there are several Pull Requests, the core team member either selects the most recent one or the best one - that's up to him to decide what is best for the project.
-- 该“Pull Request”必须由核心团队中的某人合并。如果有多个“Pull Request”，核心团队成员则会选择最新的还是最好的一个-由他来决定最适合项目的提交。
-- You can then [add a $100, $200, $300 or $500 expense on the JHipster OpenCollective](https://opencollective.com/generator-jhipster/expenses/new). You must add a link to your Pull Request in the description (for example: `$100 bug bounty claim for https://github.com/jhipster/generator-jhipster/pull/1234`).
-- 然后，您可以在JHipster的OpenCollective上增加$100，$200，$300或$500的费用。您必须在说明中添加到“Pull Request”的链接（例如：https://github.com/jhipster/generator-jhipster/pull/1234的100美元错误赏金声明).
-
-- 然后，您必须在“Pull Request”上添加注释，告知您已领取款项，并附带指向OpenCollective费用的链接。这可以确保解决此问题并和取得款项的是同一个人.
-
+- 创建一个Pull Request，用"\$\$ bug-bounty \$\$"标签标识已修复.
+- 为了自动关闭问题，必须在提交日志中包含"Fix"关键字，例如，`Fix #1234`将关闭`#1234`问题
+- 该Pull Request必须由核心团队中的某人合并。如果有多个Pull Request，核心团队成员则会选择最新的还是最好的一个-由他来决定最适合项目的提交。
+- 然后，您可以在JHipster的OpenCollective上增加一个$100，$200，$300或$500的支付费用。您必须在说明中添加Pull Request的链接（例如：`$100 bug bounty claim for https://github.com/jhipster/generator-jhipster/pull/1234`).
+- 然后，您必须在Pull Request上添加注释，告知您已领取款项，并附带指向OpenCollective费用的链接。这可以确保解决此问题并和取得款项的是同一个人.
 - 然后，这笔费用将通过[@jdubois](https://github.com/jdubois)、[@deepu105](https://github.com/deepu105)或者[@pascalgrimaud](https://github.com/pascalgrimaud)进行验证，您将从您的Paypal帐户中收到款项.
