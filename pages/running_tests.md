@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Running tests
+title: 运行测试
 permalink: /running-tests/
 redirect_from:
   - /running_tests.html
@@ -9,36 +9,36 @@ sitemap:
     lastmod: 2019-04-19T00:00:00-00:00
 ---
 
-# <i class="fa fa-shield"></i> Running tests
+# <i class="fa fa-shield"></i> 运行测试
 
-## Introduction
+## 介绍
 
-JHipster comes with an extensive set of tests, and each generated application has:
+JHipster附带了一组全面的测试，并且每个生成的应用程序都具有：
 
-*   Unit tests using [JUnit 5](https://junit.org/junit5/){:target="_blank"}.
-*   Integration tests using the Spring Test Context framework.
-*   UI tests with [Jest](https://facebook.github.io/jest/){:target="_blank"}.
-*   Architecture tests with [ArchUnit](https://www.archunit.org/){:target="_blank"}.
+*   使用[JUnit 5](https://junit.org/junit5/){:target="_blank"}进行单元测试。
+*   使用Spring Test Context框架进行集成测试。
+*   用[Jest](https://facebook.github.io/jest/){:target="_blank"}进行UI测试。
+*   使用[ArchUnit](https://www.archunit.org/){:target="_blank"}进行架构测试。
 
-Optionally, JHipster can also generate:
+可选地，JHipster还可以生成：
 
-*   Performance tests with [Gatling](http://gatling.io/){:target="_blank"}.
-*   Behaviour-driven tests with [Cucumber](https://cucumber.io/){:target="_blank"}.
-*   Angular/React/Vue integration tests with [Protractor](https://angular.github.io/protractor/#/){:target="_blank"}.
+*   用[Gatling](http://gatling.io/){:target="_blank"}进行性能测试。
+*   行为驱动的[Cucumber](https://cucumber.io/){:target="_blank"}测试。
+*   用[Protractor](https://angular.github.io/protractor/#/){:target="_blank"}进行 Angular/React/Vue集成测试
 
-We have two goals in generating those tests:
+生成这些测试有两个目标：
 
-*   Help every JHipster user to follow best practices, as we believe tests are a very useful part of every application
-*   Validate that what is being generated is correct. So even if you don't plan to use those tests at all, doing just a `./mvnw clean verify` and `npm test` after generating your application is a good way of knowing if everything is fine. You are then free to ignore those tests if you think that testing is a waste of time!
+*   帮助每个JHipster用户遵循最佳实践，因为我们认为测试是每个应用程序中非常有用的一部分
+*   验证所生成的内容正确无误。因此，即使您根本不打算使用这些测试，在生成应用程序后仅进行`./mvnw clean verify`和`npm test`也是了解一切正常的一种好方法。如果您认为测试浪费时间，那么您可以自由地忽略那些测试！
 
-All those tests will be generated in the standard Maven `src/test` folder.
+所有这些测试都将在标准`src/test`文件夹中生成。
 
-## Integration tests
+## 集成测试
 
-Integration tests are done with the Spring Test Context framework, and are located in the `src/test/java` folder. JHipster will launch a specific Spring test context, which will be re-used along all tests, as:
+集成测试是通过Spring Test Context框架完成的，位于`src/test/java`文件夹中。JHipster将启动特定的Spring测试上下文，该上下文将在所有测试中重复使用，如下所示：
 
-*   Your Spring beans should be stateless and thread-safe, and thus can be re-used across your different tests suites.
-*   Launching just one Spring context for all tests if a lot faster than launching a new Spring context for each test.
+*   您的Spring bean应该是无状态的并且是线程安全的，因此可以在不同的测试套件中重复使用。
+*   Launching just one Spring context for all tests if a lot faster than launching a new Spring context for each test.如果与为每个测试启动一个新的Spring上下文相比快得多，那么为所有测试仅启动一个Spring上下文。
 
 This Spring test context will use a specific test database to execute its tests:
 

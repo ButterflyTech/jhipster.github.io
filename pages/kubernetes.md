@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Deploying to Kubernetes
+title: 部署到Kubernetes
 permalink: /kubernetes/
 redirect_from:
   - /kubernetes.html
@@ -9,61 +9,61 @@ sitemap:
     lastmod: 2018-06-10T00:00:00-00:00
 ---
 
-# Deploying to Kubernetes
+# 部署到Kubernetes
 
-This sub-generator allows deployment of your JHipster application to [Kubernetes](http://kubernetes.io/).
+该子生成器允许将您的JHipster应用程序部署到[Kubernetes](http://kubernetes.io/)。
 
 [![]({{ site.url }}/images/logo/logo-kubernetes.png)](http://kubernetes.io/)
 
-## Limitations
+## 局限
 
-- Cassandra is not supported yet
-- Kubernetes v1.9+ is required
+- 目前尚不支持Cassandra
+- 需要Kubernetes v1.9+
 
-## Pre-requisites
+## 先决条件
 
-You have to install:
+您必须安装：
 
 - [Docker](https://docs.docker.com/installation/#installation)
 - [kubectl](http://kubernetes.io/docs/user-guide/prereqs/)
 
-You must have a Docker registry. If you don’t have one, you can use the official [Docker Hub](https://hub.docker.com/).
+您必须具有Docker registry。如果您没有，则可以使用官方的[Docker Hub](https://hub.docker.com/)。
 
 ## Minikube
 
-[Minikube](https://github.com/kubernetes/minikube) is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
+[Minikube](https://github.com/kubernetes/minikube)是一种可以轻松在本地运行Kubernetes的工具。Minikube在笔记本电脑上的VM内运行一个单节点Kubernetes集群，供希望试用Kubernetes或每天使用它开发的用户使用。
 
-You can use it to test your application before pushing it to [Kubernetes](http://kubernetes.io/).
+在将其推送到[Kubernetes](http://kubernetes.io/)之前，可以使用它来测试您的应用程序。
 
-## Running the sub-generator
+## 运行子生成器
 
-To generate config files for Kubernetes, run this command in a new folder:
+要为Kubernetes生成配置文件，请在新文件夹中运行以下命令：
 
 `jhipster kubernetes`
 
-Then answer all the questions to deploy your application.
+然后回答所有问题以部署您的应用程序。
 
-### Which *type* of application would you like to deploy?
+### Which *type* of application would you like to deploy?（您要部署哪种*类型*的应用程序？）
 
-Your type of application depends on whether you wish to deploy a microservices architecture or classical applications.
+您的应用程序类型取决于您是希望部署微服务架构还是传统应用程序。
 
-### Enter the root directory where your applications are located
+### Enter the root directory where your applications are located（输入应用程序所在的根目录）
 
-Enter the path.
+输入路径。
 
-### Which applications do you want to include in your Kubernetes configuration?
+### Which applications do you want to include in your Kubernetes configuration?(您想在Kubernetes配置中包括哪些应用程序？)
 
-Select your applications.
+选择您的应用程序。
 
-### Enter the admin password used to secure the JHipster Registry admin
+### Enter the admin password used to secure the JHipster Registry admin(输入用于保护JHipster Registry admin的管理员密码)
 
-This question is only displayed if you choose microservices architecture.
+仅当您选择微服务架构时，才会显示此问题。
 
-### What should we use for the Kubernetes namespace?
+### What should we use for the Kubernetes namespace?（我们应该为Kubernetes命名空间使用什么？）
 
-See the documentation on namespace [here](http://kubernetes.io/docs/user-guide/namespaces/)
+请参阅[此处](http://kubernetes.io/docs/user-guide/namespaces/)有关名称空间的文档
 
-### What should we use for the base Docker repository name?
+### What should we use for the base Docker repository name?（基本的Docker仓库名称应该使用什么？）
 
 If you choose [Docker Hub](https://hub.docker.com/) as main registry, it will be your Docker Hub login.
 
