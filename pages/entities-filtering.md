@@ -1,68 +1,66 @@
 ---
 layout: default
-title: Filtering
+title: 筛选
 permalink: /entities-filtering/
 sitemap:
     priority: 0.7
     lastmod: 2017-08-22T00:00:00-00:00
 ---
 
-# <i class="fa fa-filter"></i> Filtering your entities
+# <i class="fa fa-filter"></i> 筛选实体
 
-## Introduction
+## 介绍
 
-After the basic CRUD functionalities are implemented for an entity, there is a very common request to create various filters for the attributes of the entity,
-so the server could be used more effectively. These filters should be sent as the request parameters, so any client - and any browser - could use it easily.
-Additionally, these filters should follow a sane, and concise pattern, and they must be allowed combining them freely.
+在为实体实现基本的CRUD功能之后，非常常见的请求是为实体的属性创建各种过滤器，因此可以更有效地使用服务。这些过滤器应作为请求参数发送，因此任何客户端-和任何浏览器-都可以轻松使用它。此外，这些过滤器应遵循合理而简洁的模式，并且必须允许它们自由组合。
 
-## How to activate
+## 如何激活
 
-When generating an entity with `jhipster entity` command, select services or service implementation to enable filtering on this entity. 
+使用`jhipster entity`命令生成实体时，请选择服务或服务实现以对此实体启用过滤。
 
-If you want to enable filtering for existing entities, you can modify the entity configuration in your projects `.jhipster` directory, by setting `service` to `serviceClass` or `serviceImpl` from `no`, and `jpaMetamodelFiltering` to `true` and then re-generate with `jhipster entity <entity name>`.
+如果要启用对现有实体的过滤，可以通过将`service`从`no`设置为`serviceClass`或`serviceImpl`并将`jpaMetamodelFiltering`设置为`true`，然后使用`jhipster entity <entity name>`>重新生成，来修改项目`.jhipster`目录中的实体配置。
 
-When using JDL, add a line `filter <entity name>` to your JDL file and re-import the definitions with `jhipster import-jdl` command.
+使用JDL时，请在您的JDL文件中添加一行`filter <entity name>`，然后使用`jhipster import-jdl`命令重新导入定义。
 
-## Public interface
+## 公共接口
 
-For each entity, you can enable filtering in the entity generator, and after, you can call your `/api/my-entity` GET endpoint with the following parameters :
+对于每个实体，您可以在实体生成器中启用过滤，然后，可以使用以下参数调用`/api/my-entity`GET端点：
 
-* For each *xyz* field
+* 对于每个*xyz*字段
     * *xyz.equals=someValue*
-        - To list all the entities, where xyz equals to 'someValue'
+        - 列出所有xyz等于'someValue'的实体
     * *xyz.in=someValue,otherValue*
-        - To list all the entities, where xyz equals to 'someValue' or 'otherValue'
+        - 列出所有xyz等于'someValue'或'otherValue'的实体
     * *xyz.specified=true*
-        - To list all the entities, where xyz is not null, specified.
+        - 列出所有xyz不为null的实体
     * *xyz.specified=false*
-        - To list all the entities, where xyz is null, unspecified.
-* If *xyz*'s type is string:
+        - 列出所有xyz为null的实体
+* 如果*xyz*类型为字符串:
     * *xyz.contains=something*
-        - To list all the entities, where xyz contains 'something'.
-* If *xyz*'s is either any of the number types, or the date types.
+        - 列出所有实体，其中xyz包含'something'
+* 如果*xyz*是任何数字类型或日期类型
     * *xyz.greaterThan=someValue*
-        - To list all the entities, where xyz is greater than 'someValue'.
+        - 列出所有实体，其中xyz大于'someValue'
     * *xyz.lessThan=someValue*
-        - To list all the entities, where xyz is less than 'someValue'.
+        - 列出所有实体，其中xyz小于'someValue'
     * *xyz.greaterOrEqualThan=someValue*
-        - To list all the entities, where xyz is greater than or equal to 'someValue'.
+        - 列出所有实体，其中xyz大于或等于'someValue'
     * *xyz.lessOrEqualThan=someValue*
-        - To list all the entities, where xyz is less than or equal to 'someValue'.
+        - 列出所有实体，其中xyz小于或等于'someValue'
 
-Of course, they can be combined freely.
+当然，它们可以自由组合。
 
-A good way to experience the expressiveness of this filter API is to use it from swagger-ui in the API docs page of your JHipster application.
+体验此过滤器API的表达力的一种好方法是在JHipster应用程序的API文档页面的swagger-ui中使用它。
 
 ![]({{ site.url }}/images/entities_filtering_swagger.png)
 
-## Implementation
+## 实现
 
-When this feature is enabled, a new service named as `EntityQueryService` and an `EntityCriteria` is generated. Spring will convert the request parameters into the fields of the `EntityCriteria` class.
+启用此功能后，将生成一个名为`EntityQueryService`和`EntityCriteria`的新服务。Spring会将请求参数转换为`EntityCriteria`类的字段。
 
-In the `EntityQueryService`, we convert the criteria object into a static, and type safe, JPA query object. For this, it is **required** that the **static metamodel generation is enabled** in the build. See the [JPA Static Metamodel Generator documentation](http://docs.jboss.org/hibernate/orm/current/topical/html_single/metamodelgen/MetamodelGenerator.html) for details.
+在`EntityQueryService`中，我们将条件对象转换为静态对象、类型安全的JPA查询对象。为此，**需要**在构建中**启用静态元模型生成**。有关详细信息，请参见[JPA静态元模型生成器文档](http://docs.jboss.org/hibernate/orm/current/topical/html_single/metamodelgen/MetamodelGenerator.html)。
 
-To prove that the generated criteria is working, and Spring is well configured, the `EntityResourceIntTest` is extended with lots of test cases, one for each individual filter.
+为了证明所生成的条件是正确的，并且Spring配置正确，对`EntityResourceIntTest`进行了扩展，增加了许多测试用例，每个过滤器一个测试用例。
 
-## Limitations
+## 局限性
 
-Currently only SQL databases (with JPA) is supported, with the separate service or separate service implementation/interface combination.
+当前，仅支持SQL数据库（带有JPA）以及单独的服务或单独的服务实现/接口组合。

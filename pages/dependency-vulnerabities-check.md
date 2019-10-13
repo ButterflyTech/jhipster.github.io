@@ -1,49 +1,49 @@
 ---
 layout: default
-title: Dependency Vulnerabilities Check
+title: 依赖漏洞检查
 permalink: /dependency-vulnerabities-check/
 sitemap:
     priority: 0.7
     lastmod: 2018-09-15T19:00:00-00:00
 ---
 
-# <i class="fa fa-check-circle-o"></i> Dependency Vulnerabilities Check
+# <i class="fa fa-check-circle-o"></i> 依赖漏洞检查
 
-## Why project dependencies should be checked
+## 为什么要检查项目依赖项
 
-JHipster uses many technologies, and the project is very careful at selecting them. But maybe the project missed one vulnerability in those many dependencies, or maybe you added or updated one dependency that triggered a new vulnerability.
+JHipster使用了许多技术，该项目在选择它们时非常谨慎。但是，也许项目错过了这么多依赖项中的一个漏洞，或者您添加或更新了一个触发新漏洞的依赖项。
 
-According to [OWASP Top 10 Most Critical Web Application Security Risks](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project), using Components (ie. dependencies) with known vulnerabilities is ranked 9th, and there are many known stories of security breaches provided by (malicious or not) third-party dependencies.
+根据[OWASP十大最关键的Web应用程序安全风险](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)，使用具有已知漏洞的组件（即，依赖项）排名第9，并且（由恶意的或不由第三方的）依赖项提供了许多已知的安全漏洞。
 
-## Why the dependency check is not provided by default by JHipster
+## 为什么JHipster默认不提供依赖项检查
 
-Proposing a dependency check by default in JHipster build has been discussed a couple of times ([#6329](https://github.com/jhipster/generator-jhipster/issues/6329), [#8191](https://github.com/jhipster/generator-jhipster/issues/8191)). To summarise, it is complicated to have a realistic report (removing false-positive) and context dependant (security is always a trade off between the actual risk/criticity and the effort to prevent it).
+在JHipster构建中提出默认情况下的依赖项检查已经讨论了几次（[#6329](https://github.com/jhipster/generator-jhipster/issues/6329), [#8191](https://github.com/jhipster/generator-jhipster/issues/8191)）。总而言之，拥有一份现实的报告（消除误报）和上下文相关性（确保安全始终是在实际风险/批评与努力预防之间的权衡）是很复杂的。
 
-However we highly recommend using a dependency analysis tool such as [Dependabot](https://dependabot.com/) or [Snyk](https://snyk.io/) if you are using JHipster in production.  
+但是，如果您在生产中使用JHipster，我们强烈建议使用诸如[Dependabot](https://dependabot.com/)或[Snyk](https://snyk.io/)之类的依赖分析工具。
 
-## What to do do if you detect a vulnerability in one of JHipster's dependencies
+## 如果在JHipster的一个依赖项中检测到漏洞，该怎么办
 
-If you found a vulnerability in one of JHipster's dependencies, please check if there is not an existing  [issue](https://github.com/jhipster/generator-jhipster/issues) already opened on that vulnerability.
+如果您在JHipster的一个依赖项中发现了漏洞，请检查该漏洞是否在[issue](https://github.com/jhipster/generator-jhipster/issues)存在。
 
-If nothing is mentioned, please send us a security vulnerability report privately. Please read our [security policy](https://github.com/jhipster/generator-jhipster/security/policy) on how to send one. Include steps to reproduce the exploit, security report, blog post, etc.
+如果未提及任何漏洞相关内容，请私下向我们发送安全漏洞报告。请阅读有关如何漏洞的[安全政策](https://github.com/jhipster/generator-jhipster/security/policy)。包括重现漏洞利用，安全报告，博客文章等等步骤。
 
-Be sure that the JHipster team is committed to provide a high-quality, enterprise-ready and secure development stack and that this issue will be a top priority for us.
+确保JHipster团队致力于提供高质量，企业级且安全的开发架构，并且此问题将是我们的重中之重。
 
-# How to check a JHipster project's dependencies
+# 如何检查JHipster项目的依赖关系
 
-## Checking on the Server side
+## 在服务器端检查
 
-To check if a Java dependency has a known Common Vulnerabilities and Exposures (aka. CVE), visit the [NIST National Vulnerability Database](https://nvd.nist.gov/) which maintains an up-to-date list.
+要检查Java依赖项是否具有已知的常见漏洞和披露（aka. CVE），请访问[NIST国家漏洞数据库](https://nvd.nist.gov/)，该数据库维护了最新列表。
 
-The OWASP project provides Maven and Gradle plugins to check the whole dependency chain automatically, generate a report and even block a build (not recommended, it can be very aggressive when doing continuous integration).
+OWASP项目提供了Maven和Gradle插件来自动检查整个依赖链，生成报告甚至阻止构建（不建议这样做，在进行持续集成时会非常激进）。
 
-[Here is the documentation explaining how to read the dependency check report](https://jeremylong.github.io/DependencyCheck/general/thereport.html).
+[如何阅读依赖性检查报告文档](https://jeremylong.github.io/DependencyCheck/general/thereport.html).
 
-### Using Maven
+### 使用Maven
 
-See the [OWASP Maven Dependency Check plugin documentation](https://jeremylong.github.io/DependencyCheck/dependency-check-maven/index.html)
+请参阅[OWASP Maven Dependency Check插件文档](https://jeremylong.github.io/DependencyCheck/dependency-check-maven/index.html)
 
-Add the owasp dependency-check plugin:
+添加owasp依赖项检查插件：
 ```
 <build>
 ...
@@ -66,12 +66,14 @@ Add the owasp dependency-check plugin:
   ...
 </build>
 ```
-Running `./mvnw verify` will generate a dependency check report under the `target` directory.
 
-### Using Gradle
-See the [OWASP Gradle Dependency Check plugin documentation](https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html)
+运行`./mvnw verify`将在`target`目录下生成一个依赖项检查报告。
 
-Update the `build.gradle` file to apply the [OWASP dependency-check-gradle plugin](https://plugins.gradle.org/plugin/org.owasp.dependencycheck).
+### 使用Gradle
+
+请参阅[OWASP Gradle依赖检查插件文档](https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html)
+
+更新`build.gradle`文件以应用[OWASP依赖项检查插件](https://plugins.gradle.org/plugin/org.owasp.dependencycheck)。
 
 ```
 buildscript {
@@ -90,11 +92,10 @@ if(project.hasProperty('strict-security')) {
 }
 ```
 
-Running `./gradlew dependencyCheckAnalyze` generates a dependency check report inside the `build/report` directory.
+运行`./gradlew dependencyCheckAnalyze`在`build/report`目录中生成一个依赖项检查报告。
 
-Updating continuous integration builds with a dependency check is done by running `./gradlew check -Pstrict-security`
+通过运行`./gradlew check -Pstrict-security`，可以通过依赖性检查来更新持续集成构建。
 
-## Checking on the client side
+## 在客户端检查
 
-Since version 6, NPM includes a security audit by default for each dependency installation. Check the [About security audits
-](https://docs.npmjs.com/getting-started/running-a-security-audit) page for more information.
+从版本6开始，默认情况下，NPM包括针对每个依赖项安装的安全审核。查看[关于安全审核](https://docs.npmjs.com/getting-started/running-a-security-audit)页面以获取更多信息。

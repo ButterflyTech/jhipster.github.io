@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Setting up Continuous Integration on Jenkins 2
+title: 在Jenkins上设置持续集成 2
 permalink: /setting-up-ci-jenkins2/
 redirect_from:
   - /setting_up_ci_jenkins2.html
@@ -9,37 +9,37 @@ sitemap:
     lastmod: 2017-01-19T14:15:00-00:00
 ---
 
-# <i class="fa fa-stethoscope"></i> Setting up Continuous Integration on Jenkins 2
+# <i class="fa fa-stethoscope"></i> 在Jenkins上设置持续集成 2
 
-## Installing Jenkins 2
+## 安装Jenkins 2
 
-### Standard
+### 标准步骤
 
-Install JDK 8 on your machine.
+在计算机上安装JDK 8。
 
-Go to the official site [https://jenkins.io/2.0/](https://jenkins.io/2.0/)
+转到官方网站[https://jenkins.io/2.0/](https://jenkins.io/2.0/)
 
-Download the `jenkins.war`
+下载`jenkins.war`
 
-### With Docker
+### 使用Docker
 
-Launch the [Docker image](https://hub.docker.com/r/jenkinsci/jenkins/) (the default port has been changed to 18080):
+启动[Docker镜像](https://hub.docker.com/r/jenkinsci/jenkins/)（默认端口已更改为18080）：
 
 `docker container run -d --name jenkins2 -p 18080:8080 -p 50000:50000 jenkinsci/jenkins`
 
-## Create a new Job
+## 建立新Job
 
-- Add New Item
-    - Enter an item name
-    - Select pipeline
-    - Click OK
+- 新增条目
+    - 输入条目名称
+    - 选择pipeline
+    - 点击OK
 
 ![Jenkins2 item]({{ site.url }}/images/jenkins2_add_item.png)
 
 - Definition: Pipeline script from SCM
 - SCM: Git
 - Repositories
-    - Repository URL: select your repository here
+    - Repository URL: 选择仓库
 
 ![Jenkins2 pipeline]({{ site.url }}/images/jenkins2_pipeline.png)
 

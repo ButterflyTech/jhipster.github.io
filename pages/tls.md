@@ -1,40 +1,40 @@
 ---
 layout: default
-title: Using TLS and HTTP/2
+title: 使用TLS和HTTP/2
 permalink: /tls/
 sitemap:
     priority: 0.7
     lastmod: 2018-10-04T00:00:00-00:00
 ---
 
-# <i class="fa fa-lock"></i> Using TLS and HTTP/2 in development
+# <i class="fa fa-lock"></i> 在开发中使用TLS和HTTP/2
 
-## Introduction
+## 介绍
 
-This page is for using TLS and HTTP/2 in development (mainly for testing purposes). For production configuration, please read the [security section in the production documentation]({{ site.url }}/production/#security).
+此页面用于在开发中使用TLS和HTTP/2（主要用于测试目的）。对于生产配置，请阅读[生产文档中的安全性部分]({{ site.url }}/production/#security)。
 
-TLS is the protocol used when having an `https://` URL, and it is required in order to use HTTP/2 on modern browsers.
+TLS是具`https://` URL时使用的协议，并且在现代浏览器中使用HTTP/2是必需的。
 
-It is useful to use those protocols when testing an application, mainly for performance reasons.
+主要出于性能原因，在测试应用程序时使用这些协议很有用。
 
-## Using TLS and HTTP/2 with Spring Boot
+## 在Spring Boot中使用TLS和HTTP/2
 
-JHipster has a specific configuration for configuring both TLS and HTTP/2 (see the [common application properties documentation]({{ site.url }}/common-application-properties/)), and in order to make things even simpler:
+JHipster具有用于配置TLS和HTTP/2的特定配置（请参阅[通用应用程序属性文档]({{ site.url }}/common-application-properties/))），并且使事情变得更加简单：
 
-- JHipster generates a self-signed certificate at application generation
-- A specific `tls` profile is provided (see the [profiles documentation]({{ site.url }}/profiles/))
+- JHipster在应用程序生成时生成自签名证书
+- 提供了特定的`tls`配置文件（请参阅[配置文件文档]({{ site.url }}/profiles/)）
 
-In order to run JHipster with the provided self-signed certificate, with TLS and HTTP/2 enabled, you just need to use this `tls` profile:
+为了使用提供的自签名证书（启用了TLS和HTTP/2）运行JHipster，您只需要使用以下`tls`配置文件：
 
-*   with Maven: `./mvnw -Pdev,tls`
-*   with Gradle: `./gradlew -Ptls`
+*   使用Maven: `./mvnw -Pdev,tls`
+*   使用Gradle: `./gradlew -Ptls`
 
-The application will be available on `https://localhost:8080/`.
+该应用程序将在`https://localhost:8080/`上可用。
 
-As the certificate is self-signed, your browser will issue a warning, and you will need to ignore it (or import it) in order to access the application.
+由于证书是自签名的，因此浏览器将发出警告，并且您将需要忽略它（或将其导入）以访问该应用程序。
 
-## Using TLS and HTTP/2 with Angular or React or Vue.js
+## 在Angular或React或Vue.js中使用TLS和HTTP/2
 
-Instead of using `npm start` in order to run the front-end (with Webpack and BrowserSync), just run `npm run start-tls`, and it will connect to the back-end running on `https://localhost:8080/`.
+无需使用`npm start`来运行前端（使用Webpack和BrowserSync），只需运行`npm run start-tls`，它将连接`https://localhost:8080/`上运行的后端。
 
-Everything should then work the same as without TLS and HTTP/2.
+然后，所有内容应与没有使用TLS和HTTP/2的情况相同。

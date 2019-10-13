@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Using MongoDB
+title: 使用MongoDB
 permalink: /using-mongodb/
 redirect_from:
   - /using_mongodb.html
@@ -9,20 +9,20 @@ sitemap:
     lastmod: 2015-02-24T00:00:00-00:00
 ---
 
-# <i class="fa fa-leaf"></i> Using MongoDB
+# <i class="fa fa-leaf"></i> 使用MongoDB
 
-MongoDB is one of the supported databases that can be selected when your application is being generated.
+MongoDB是生成应用程序时可以选择的受支持数据库之一。
 
-When MongoDB is selected:
+选择MongoDB时：
 
-*   Spring Data MongoDB will be used to access the database. This is very close to Spring Data JPA, and this is why MongoDB support is very close to the (default) JPA support
-*   [Mongobee](https://github.com/mongobee/mongobee) is used instead of [Liquibase](http://www.liquibase.org/) to manage database changes
-*   The [entity sub-generator]({{ site.url }}/creating-an-entity/) will not ask you for entity relationships, as you can't have relationships with a NoSQL database (at least not in the way you have relationships with JPA)
-*   [de.flapdoodle.embed.mongo](https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo) is used to run an in-memory version of the database for running unit tests.
+*   Spring Data MongoDB将用于访问数据库。这非常接近Spring Data JPA，这就是为什么MongoDB支持非常接近（默认）JPA支持的原因
+*   [Mongobee](https://github.com/mongobee/mongobee)用于代替[Liquibase](http://www.liquibase.org/)管理数据库更改
+*   [实体子生成器]({{ site.url }}/creating-an-entity/)不会询问您实体关系，因为您无法在NoSQL数据库建立关系（至少不会在JPA建立关系）
+*   [de.flapdoodle.embed.mongo](https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo) 用于运行数据库的内存版本以运行单元测试。
 
 ### MongoDB Atlas
 
-If you want to use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), you can encounter this error:
+如果要使用[MongoDB Atlas](https://www.mongodb.com/cloud/atlas)，可能会遇到此错误：
 
 ```json
 error: {
@@ -33,8 +33,7 @@ error: {
 }
 ```
 
-As [Mongobee](https://github.com/mongobee/mongobee/) is not maintained anymore, you could migrate to [Mongock](https://github.com/cloudyrock/mongock). See:
-
+由于[Mongobee](https://github.com/mongobee/mongobee/)不再维护，因此您可以迁移到[Mongock](https://github.com/cloudyrock/mongock)。访问：
 - the ticket: [issues/8665](https://github.com/jhipster/generator-jhipster/issues/8665)
 - the proposal: [issues/8678](https://github.com/jhipster/generator-jhipster/issues/8678)
 - the question on [StackOverFlow](https://stackoverflow.com/questions/49958635/mongodb-atlas-user-is-not-allowed-to-do-action-find-on-system-indexes)
