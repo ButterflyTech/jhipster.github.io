@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Technology stack
+title: 技术栈
 permalink: /tech-stack/
 redirect_from:
   - /tech_stack.html
@@ -9,11 +9,11 @@ sitemap:
     lastmod: 2014-05-16T00:00:00-00:00
 ---
 
-# <i class="fa fa-stack-overflow"></i> Technology stack
+# <i class="fa fa-stack-overflow"></i> 技术栈
 
-## Technology stack on the client side
+## 前端技术栈
 
-Single Web page application:
+单页应用:
 
 *   [Angular](https://angular.io/)或[React](https://reactjs.org/) 或[Vue](https://vuejs.org/)
 *   基于[推特Bootstrap](http://getbootstrap.com/)自适应Web设计
@@ -67,4 +67,3 @@ Single Web page application:
 *   构建标准WAR文件或者可执行的JAR文件
 *   完整的Docker和Docker Compose支持
 *   支持所有主流的云服务提供商: AWS, Cloud Foundry, GCP, Heroku, Kubernetes, OpenShift, Azure, Docker…
-    
