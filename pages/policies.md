@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Policies
+title: 规范
 permalink: /policies/
 redirect_from:
   - /policies.html
@@ -9,38 +9,38 @@ sitemap:
     lastmod: 2015-07-31T18:40:00-00:00
 ---
 
-# <i class="fa fa-gavel"></i> Policies
+# <i class="fa fa-gavel"></i> 规范
 
-The JHipster development team follows some coding policies. You can see them as "best practices" or "guidelines". They are enforced on the project itself, not on the generated code: if you just use JHipster to generate your project, you absolutely do not have to follow them!
+JHipster开发团队遵循一些编码规范。您可以将它们视为“最佳做法”或“指南”。它们是在项目本身而不是生成的代码上强制执行的：如果仅使用JHipster生成项目，则绝对不必遵循它们！
 
-Those policies are followed by the [development team]({{ site.url }}/team/), and you should follow them if you submit a Pull Request.
+这些规范由[开发团队]({{ site.url }}/team/)遵循，如果您提交Pull Request，则应遵循这些风格。
 
-## Policy 0: Policies are voted by the development team
+## 规范0：政策由开发团队投票决定
 
-Each policy can be discussed or modified by the development team on the [mailing list](https://groups.google.com/forum/?hl=en#!forum/jhipster-dev). Any significant change must be voted (+1 if you agree, -1 if you disagree).
+开发团队可以在[邮件列表](https://groups.google.com/forum/?hl=en#!forum/jhipster-dev)中讨论或修改每个规范。任何重大更改必须进行表决（如果您同意，则为+1；如果不同意，则为-1）。
 
-## Policy 1: technologies used by JHipster have their default configuration used as much as possible
+## 规范1：JHipster使用的技术尽可能使用其默认配置
 
-For example, we use JPA, Spring, Angular and React the "usual way", without some heavy configuration options and with their usual naming and coding conventions. We do this as:
+例如，我们以“通常方式”使用JPA，Spring，Angular和React，而没有一些繁琐的配置选项以及它们通常的命名和编码约定。我们这样做是：
 
-- Each technology usually has a very good reason to have those defaults
-- It's much easier to understand how JHipster works if we don't re-configure everything
+- 通常，每种技术都有很好采用默认设置的理由
+- 如果我们不重新配置所有内容，则更容易了解JHipster的工作原理
 
-We might only change a default configuration if it produces some issue with the other technologies used by JHipster. For example, to have Spring Security and Angular working together, we had to change Spring Security's default configuration.
+仅当默认配置与JHipster使用的其他技术产生问题时，我们才可能更改默认配置。例如，要让Spring Security和Angular一起工作，我们必须更改Spring Security的默认配置。
 
-## Policy 2: only add options when there is sufficient added-value in the generated code
+## 规范2：仅在生成的代码中有足够的附加值时添加选项
 
-JHipster has many options when generating a project. We only add those options when they are complex and imply configuring or coding several components.
+生成项目时，JHipster有许多选项。仅当这些选项很复杂并且暗示配置或编码多个组件时，我们才添加它们。
 
-Adding an option only because it saves a couple of lines to code isn't a good usage of JHipster:
+添加选项仅是因为它节省了几行代码，但这并不是JHipster的好用法：
 
-- It's easier to code those lines manually than to learn a new JHipster option
-- It will only make our generator more complex without adding any value
+- 手动编写这些行比学习新的JHipster选项要容易
+- 这只会使我们的生成器更加复杂，而不会增加任何价值
 
-## Policy 3: for the Java code, follow the default Intellij IDEA coding style
+## 规范3：对于Java代码，请遵循默认的Intellij IDEA编码样式
 
-There are many ways to format your code. We follow the default rules provided by Intellij IDEA.
+有很多方法可以格式化代码。我们遵循Intellij IDEA提供的默认规则。
 
-## Policy 4: use strict versions for third-party libraries
+## 政策4：对第三方库使用严格的版本
 
-We've had many issues with library versions making conflicts. This is mostly a JavaScript issue, so to be clear: we use fixed libraries versions in `package.json` files.
+库版本存在很多问题，会引起冲突。这主要是一个JavaScript问题，因此需要明确：我们在`package.json`文件中使用了固定的库版本。

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sponsors
+title: 赞助
 permalink: /sponsors/
 sitemap:
     priority: 0.1
@@ -8,9 +8,9 @@ sitemap:
 ---
 # <i class="fa fa-usd"></i> 赞助
 
-JHipster现在通过[OpenCollective](https://opencollective.com/generator-jhipster)募捐. 这些钱公开的([See the OpenCollective documentation](https://opencollective.com/learn-more))用于支付整个项目的花费(比如运行这个网站), 你的赞助将会令这个项目长远的发展下去.
+JHipster现在通过[OpenCollective](https://opencollective.com/generator-jhipster)募捐. 这些资金是公开的([请参阅OpenCollective文档）](https://opencollective.com/learn-more))，用于支付整个项目的花费(比如运行这个网站), 你的赞助将会令这个项目长远的发展下去.
 
-请到我们的[OpenCollective页面](https://opencollective.com/generator-jhipster) 成为一个支持者或者赞助商.
+请到我们的[OpenCollective页面](https://opencollective.com/generator-jhipster)成为一个支持者或者赞助商.
 
 ## 支持者福利
 
@@ -45,7 +45,7 @@ JHipster现在通过[OpenCollective](https://opencollective.com/generator-jhipst
 
 ## 项目资金计划
 
-您可以阅读这篇文档 [the OpenCollective documentation](https://docs.opencollective.com), 您捐助的资金将会公开透明的展示在这里.
+您可以阅读这篇[OpenCollective文档](https://docs.opencollective.com), 您捐助的资金将会公开透明的展示在这里.
 
 任何人都可以申请费用. 如果这笔费用有助于社区的发展，我们将记入在OpenCollective的账本，并报销费用。
 

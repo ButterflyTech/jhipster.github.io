@@ -1,57 +1,58 @@
 ---
 layout: default
-title: Deploying to Microsoft Azure
+title: 部署到微软Azure
 permalink: /azure/
 sitemap:
     priority: 0.7
     lastmod: 2018-08-24T00:00:00-00:00
 ---
 
-# <i class="fa fa-cloud-upload"></i> Deploying to Microsoft Azure
+# <i class="fa fa-cloud-upload"></i> 部署到微软Azure
 
 [![Microsoft Azure]({{ site.url }}/images/logo/logo-azure.png)](https://azure.microsoft.com/overview/?WT.mc_id=online-jhipster-brborges)
 
-Deploying JHipster applications to Microsoft Azure are as easy as deploying Docker containers. Azure supports the deployment of Uber JARs, WAR files, and Docker images, either as standalone or orchestrated on top of Kubernetes. Sub-generators are not needed for the deployment choices documented below.
+将JHipster应用程序部署到Microsoft Azure就像部署Docker容器一样容易。Azure支持Uber JAR，WAR文件和Docker镜像的部署，既可以独立部署也可以在Kubernetes上进行编排。下文记录的部署选项不需要子生成器。
 
-Developers can obtain an [Azure Trial subscription](http://azure.microsoft.com/free?WT.mc_id=online-jhipster-brborges) and perform all the deployment options below with the free credits provided to the trial account. Some of the services covered below also offer a free quota based on hours of compute and/or number of applications, that will not incur consumption of the granted free credits.
+开发人员可以获取[Azure试用版订阅](http://azure.microsoft.com/free?WT.mc_id=online-jhipster-brborges)，并使用提供给试用帐户的免费信用执行以下所有部署选项。下文涵盖的某些服务还根据计算时间（和/或）应用程序数量提供免费配额，这不会消耗授予的免费积分。
 
-For web applications, the best service to get started with is [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/?WT.mc_id=online-jhipster-brborges), and in general Azure comes with three key ways to deploy applications: (1) using the [Azure Dashboard](https://ms.portal.azure.com/); (2) using the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?WT.mc_id=online-jhipster-brborges) or; (3) using the [Maven Plugin](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme?WT.mc_id=online-jhipster-brborges).
+对于Web应用程序，最好的入门服务是[Azure App Service](https://azure.microsoft.com/en-us/services/app-service/?WT.mc_id=online-jhipster-brborges)，通常Azure提供了三种部署应用程序的关键方法：（1）使用[Azure仪表板](https://ms.portal.azure.com/)；（2）使用[Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?WT.mc_id=online-jhipster-brborges)或;（3）使用[Maven插件](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme?WT.mc_id=online-jhipster-brborges)。
 
-This documentation covers some of these methods, but not all of them and not all possible services either. For more details, check the [Azure Documentation](https://docs.microsoft.com/azure?WT.mc_id=online-jhipster-brborges) website.
+本文档介绍了其中一些方法，但不是全部，也不是所有可用的服务。有关更多详细信息，请访问[Azure文档](https://docs.microsoft.com/azure?WT.mc_id=online-jhipster-brborges)网站。
 
-Currently, Azure does not provide plugins for Gradle, so therefore some of the instructions below will be specific to Maven projects, while others can be done with the Azure CLI and other command-line tools.
+当前，Azure不提供用于Gradle的插件，因此下面的某些指引将特定于Maven项目，而其他指引可以使用Azure CLI和其他命令行工具来完成。
 
-## Supported Databases
+## 支持的数据库
 
-JHipster applications configured to the following databases will find services that provide these data storage solutions:
+配置为以下数据库的JHipster应用程序，将可以得到提供这些数据存储解决方案的服务：
 
 - MySQL / MariaDB
-  - You can create a MySQL (MariaDB compliant) instance with [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/?WT.mc_id=online-jhipster-brborges)
+  - 您可以使用[Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/?WT.mc_id=online-jhipster-brborges)创建一个MySQL（兼容MariaDB）实例
 - PostgreSQL
-  - You can create a PostgreSQL instance with [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/?WT.mc_id=online-jhipster-brborges)
+  - 您可以使用[Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/?WT.mc_id=online-jhipster-brborges)创建PostgreSQL实例
 - MS SQL Server (MSSQL)
-  - You can create an instance with [Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/?WT.mc_id=online-jhipster-brborges)
+  - 您可以使用[Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/?WT.mc_id=online-jhipster-brborges)创建实例
 - Apache Cassandra / MongoDB
-  - You can set compatible APIs for Cassandra or MongoDB on [Azure CosmosDB](https://docs.microsoft.com/en-us/azure/cosmos-db/?WT.mc_id=online-jhipster-brborges) instances
+  - 您可以在[Azure CosmosDB](https://docs.microsoft.com/en-us/azure/cosmos-db/?WT.mc_id=online-jhipster-brborges)实例上为Cassandra或MongoDB设置兼容的API
 
-## Before you start
+## 开始之前
 
-Install and authenticate with the Azure CLI on your local environment. For more information, visit these links:
+在本地环境上安装并通过Azure CLI进行身份验证。有关更多信息，请访问以下链接：
 
-- [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?WT.mc_id=online-jhipster-brborges)
-- [Authenticate with Azure CLI](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli?WT.mc_id=online-jhipster-brborges)
+- [安装Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?WT.mc_id=online-jhipster-brborges)
+- [使用Azure CLI进行身份验证](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli?WT.mc_id=online-jhipster-brborges)
 
-## Monolithic JHipster Applications
+## Monolithic JHipster应用
 
-Monolithic applications are the easiest to deploy, as usual. In this section we will explore how to deploy Jar artifacts from JHipster projects using the Apache Maven Plugin for Azure App Service for Web Apps:
+通常，Monolithic应用程序是最容易部署的。在本节中，我们将探索如何使用适用于Web应用程序，适用于Azure应用服务的Apache Maven插件，从JHipster项目部署Jar artifacts：
 
-### Executable Jar files
+### 可执行的Jar文件
 
-Azure App Service supports running executable Jar files as generated by JHipster.
+Azure App Service支持运行由JHipster生成的可执行Jar文件。
 
-To proceed with the deployment, follow these steps:
+要继续进行部署，请按照下列步骤操作：
 
-1. Add the following Maven Plugin configuration to your main `<build>` element of your `pom.xml`:
+1. 将以下Maven插件配置添加到`pom.xml`的主`<build>`元素中：
+
     ```xml
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
@@ -82,9 +83,9 @@ To proceed with the deployment, follow these steps:
             </plugin>
 
     ```
-    Be careful, the attributes `resourceGroup`, `appName`, `pricingTier` and `region` must be configured with
-    correct project values.
-1. As you will probably use a database, do not forget to modify the `application-prod.yml` file accordingly, for example with an Azure MySQL database:
+    请注意，必须使用正确的项目值配置属性`resourceGroup`，`appName`，`pricingTier`和`region`。
+1. 因为您可能会使用数据库，所以请不要忘记相应地修改`application-prod.yml`文件，例如，使用Azure MySQL数据库：
+
     ```
     spring:
       datasource:
@@ -93,56 +94,57 @@ To proceed with the deployment, follow these steps:
         password: MyPasswordToChangeInProduction
     ```
 
-1. Build the project with the following command, as usual for a JHipster production build:
+1.  与JHipster生产构建一样，使用以下命令构建项目：
+
     ```sh
         ./mvnw clean package -Pprod
     ```
-1. Deploy the application:
+1. 部署应用程序：
     ```sh
         ./mvnw azure-webapp:deploy
     ```
 
-For up-to-date information about the Maven Plugin for Azure App Service, check the [documentation](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme?WT.mc_id=online-jhipster-brborges).
+有关用于Azure App Service的Maven插件的最新信息，请查看[文档](https://docs.microsoft.com/en-us/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme?WT.mc_id=online-jhipster-brborges)。
 
-### Docker-based Monolithic Application
+### 基于Docker的Monolithic应用
 
-To deploy your monolithic application as a Docker container to Azure, the ideal and simplest solution is to run it on [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/?WT.mc_id=online-jhipster-brborges), which provisions Docker containers almost instantaneously. But for this you will first have to [create an Azure Container Registry (ACR)](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli?WT.mc_id=online-jhipster-brborges). You can also push your image to your Docker Hub repository and create a Docker container on ACI by pulling the image from there, but this method is insecure since your Docker image may be public to anyone to download and you risk having credentials (e.g. to databases) in your application.
+要将整体应用程序作为Docker容器部署到Azure，理想且最简单的解决方案是在[Azure容器实例（ACI）](https://docs.microsoft.com/en-us/azure/container-instances/?WT.mc_id=online-jhipster-brborges)上运行它，该容器几乎立即配置Docker容器。但是为此，您首先必须（ACR[创建一个Azure容器仓库(ACR)](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli?WT.mc_id=online-jhipster-brborges)。您也可以将镜像推送到Docker Hub仓库，并通过从那里拉取镜像到ACI上创建Docker容器，但是这种方法是不安全的，因为您的Docker镜像可能是任何人都可以下载的，并且镜像可能会包含凭证（例如，数据库））。
 
-Once you have an ACR created, you can generate your JHipster Docker image and push to it to later use that image on Azure Container Instances. Let's see how this works:
+创建ACR之后，可以生成JHipster Docker镜像并将其推送到仓库，将来在Azure容器实例上使用该镜像。让我们看看它是如何工作的：
 
-1. Imagine you have a JHipster application called `myjhipsterapp`.
-1. Build a Docker image for your monolithic JHipster project:
+1. 假设您有一个名为`myjhipsterapp`的JHipster应用程序。
+1. 为monolithic JHipster项目构建Docker镜像：
     ```sh
         ./mvnw package -Pprod jib:dockerBuild
     ```
-1. Tag and push your generated Docker image to your ACR instance. For example:
+1. 标记生成的Docker镜像并将其推送到ACR实例。例如：
     ```sh
         docker tag myjhipsterapp:latest <your-acr-server>/myjhipsterapp:latest
     ```
-1. Make sure your Docker CLI is authenticated to your ACR
+1. 确保您的Docker CLI已通过ACR身份验证 
     ```sh
         az acr login --name <acrName>
     ```
-1. Push your image to your ACR instance:
+1. 将镜像推送到您的ACR实例：
     ```sh
         docker push <your-acr-server>/myjhipsterapp:latest
     ```
 
-Now that your image is available on your Azure Container Registry, you can create a Docker container based on it on Azure Container Instances. For a complete step-by-step, please [refer to the documentation](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli?WT.mc_id=online-jhipster-brborges#deploy-image-to-aci). The steps below are for simplicity and should **not** be used in *production*:
+现在，您的镜像在Azure容器仓库中可用，您可以在Azure容器实例（ACI）上基于它创建一个Docker容器。有关完整的步骤指南，请 [参阅此文档](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli?WT.mc_id=online-jhipster-brborges#deploy-image-to-aci)。以下步骤是为了简单起见，**不**应在*生产*中使用：
 
-1. Enable admin:
+1. 启用管理员：
     ```sh
         az acr update --name <acrName> --admin-enabled true
     ```
-1. Retrieve password to authenticate ACI against ACR:
+1. 从ACR检索密码以验证ACI：
     ```sh
         az acr credential show --name <acrName> --query "passwords[0].value"
     ```
-1. Deploy a container with 1 CPU core and 1 GB of RAM:
+1.  部署具有1个CPU内核和1 GB RAM的容器：
     ```sh
         az container create --resource-group myResourceGroup --name myjhipsterapp --image <acrLoginServer>/myjhipsterapp:latest --cpu 1 --memory 1 --registry-username <acrName> --registry-password <acrPassword> --dns-name-label myjhipsterapp --ports 8080
     ```
 
-## Docker containers on Kubernetes
+## Kubernetes上的Docker容器
 
-To deploy your JHipster Microservices to Kubernetes on Azure, all you need to do is to create an Azure Kubernetes Service cluster, and configure it to your local `kubectl`. After that, you can follow the generic JHipster on Kubernetes documentation. Follow [these documented steps](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough?WT.mc_id=online-jhipster-brborges) for a complete walk-through.
+要将JHipster微服务部署到Azure上的Kubernetes，只需要做的就是创建一个Azure Kubernetes Service群集，并将其配置为本地`kubectl`。之后，您可以按照Kubernetes文档上的通用JHipster进行操作。请按照[这些文档步骤](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough?WT.mc_id=online-jhipster-brborges)进行一个完整的操作流程。

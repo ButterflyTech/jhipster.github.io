@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contributing Companies
+title: 公司贡献
 permalink: /contributing-companies/
 redirect_from:
   - /thanks/
@@ -9,7 +9,7 @@ sitemap:
     priority: 0.1
     lastmod: 2017-11-29T00:00:00-00:00
 ---
-# <i class="fa fa-building"></i> 贡献或帮助Jhipster的公司
+# <i class="fa fa-building"></i> 或帮助Jhipster的公司
 
 ## 为JHipster贡献的公司
 
@@ -46,4 +46,4 @@ JHipster与其他OSS社区紧密合作，后者经常为项目贡献代码，建
 
 ## 特别感谢
 
-非常感谢[Galeries Lafayette](http://www.galerieslafayette.com/)的开发团队，他们最初的想法是使Grunt与Ant一起工作，并在更经典的Spring MVC应用程序之上创建现代Web前端.
+非常感谢[Galeries Lafayette](http://www.galerieslafayette.com/)的开发团队，他们是最初提出使Grunt与Ant一起工作的想法，并在更经典的Spring MVC应用程序之上创建现代Web前端.

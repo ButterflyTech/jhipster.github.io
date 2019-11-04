@@ -16,7 +16,7 @@ JHipster蓝图是一个Yeoman生成器，它由特定的JHipster子生成器[组
 
 JHipster蓝图在[JHipster市场]({{ site.url }}/modules/marketplace/)上带有`jhipster-blueprint`标签。
 
-这允许创建可以覆盖JHipster特定部分（例如仅客户端模板）的第三方蓝图。
+这允许创建可以覆盖JHipster特定部分（例如仅前端模板）的第三方蓝图。
 
 ## 使用蓝图
 
@@ -32,7 +32,7 @@ jhipster --blueprint <blueprint name>
 
 这是我们的官方蓝图，展示了如何创建自己的蓝图。
 
-[JHipster示例蓝图](https://github.com/hipster-labs/generator-jhipster-sample-blueprint)展示了如何覆盖客户端子生成器。
+[JHipster示例蓝图](https://github.com/hipster-labs/generator-jhipster-sample-blueprint)展示了如何覆盖前端子生成器。
 
 或者，您可以使用[JHipster蓝图生成器](https://github.com/jhipster/generator-jhipster-blueprint)来帮助您初始化蓝图。
 

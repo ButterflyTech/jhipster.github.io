@@ -1,19 +1,19 @@
 ---
 layout: default
-title: JHipster注册中心
+title: JHipster Registry
 permalink: /jhipster-registry/
 sitemap:
     priority: 0.7
     lastmod: 2019-02-01T00:00:00-00:00
 ---
 
-# <i class="fa fa-dashboard"></i> JHipster注册中心
+# <i class="fa fa-dashboard"></i> JHipster Registry
 
 ## Overview
 
-JHipster注册中心是JHipster团队提供的应用程序。与JHipster生成器一样，它是一个开源，Apache 2-licensed应用程序，其源代码在JHipster组织的GitHub上可用：[jhipster/jhipster-registry](https://github.com/jhipster/jhipster-registry)
+JHipster Registry是JHipster团队提供的应用程序。与JHipster生成器一样，它是一个开源，Apache 2-licensed应用程序，其源代码在JHipster组织的GitHub上可用：[jhipster/jhipster-registry](https://github.com/jhipster/jhipster-registry)
 
-JHipster注册中心具有三个主要功能：
+JHipster Registry具有三个主要功能：
 
 - 它是一个[Eureka服务](https://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html)，用作应用程序的发现服务。这就是JHipster处理所有应用程序的路由，负载均衡和可伸缩性的方式。
 - 它是一个[Spring Cloud配置服务](https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html)，为所有应用程序运行时提供配置。
@@ -29,7 +29,7 @@ JHipster注册中心具有三个主要功能：
 2. [使用Eureka进行服务发现](#eureka)
 3. [使用Spring Cloud Config进行应用程序配置](#spring-cloud-config)
 4. [管理仪表板](#dashboards)
-5. [保护JHipster注册中心](#security)
+5. [保护JHipster Registry](#security)
 
 ## <a name="installation"></a> 安装
 
@@ -75,7 +75,7 @@ JHipster Registry在我们的[发行页面](https://github.com/jhipster/jhipster
 
 ### 使用Docker
 
-如果您希望从Docker映像运行JHipster Registry，则可以在Docker Hub上的[jhipster/jhipster-registry](https://hub.docker.com/r/jhipster/jhipster-registry/)上找到它。每个微服务`src/main/docker`目录中已经存在一个用于轻松运行该映像的docker-compose文件：
+如果您希望从Docker镜像运行JHipster Registry，则可以在Docker Hub上的[jhipster/jhipster-registry](https://hub.docker.com/r/jhipster/jhipster-registry/)上找到它。每个微服务`src/main/docker`目录中已经存在一个用于轻松运行该镜像的docker-compose文件：
 
 - 运行`docker-compose -f src/main/docker/jhipster-registry.yml up`以启动JHipster Registry。它将在Docker主机的端口`8761`上可用，因此如果它在您的计算机上运行，​​则应位于[http://127.0.0.1:8761/](http://127.0.0.1:8761/)。
 

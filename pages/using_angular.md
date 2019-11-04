@@ -16,10 +16,10 @@ Angular使用TypeScript而不是JavaScript，因此需要一些特定的工具�
 1. 生成应用程序时，将创建新的文件，并在生成结束时触发`npm install`任务。
 2. 一旦`npm install`完成，它将在`package.json`中调用`postInstall`脚本，此步骤将触发`webpack:build`任务。
 3. 现在，基于您选择的生成工具（Maven或Gradle），所有的文件应该被生成并编译到`target`或`build`文件夹内的`www`文件夹中。
-4. 现在运行`./mvnw`或`./gradlew`来启动应用程序服务器，它应该在[localhost:8080](localhost:8080)上可用，这也可以提供根据上述步骤编译的客户端代码。
+4. 现在运行`./mvnw`或`./gradlew`来启动应用程序服务器，它应该在[localhost:8080](localhost:8080)上可用，这也可以提供根据上述步骤编译的前端代码。
 5. 现在，在新终端中运行`npm start`或`yarn start`，以使用BrowserSync启动Webpack开发服务器。这将负责编译您的TypeScript代码，并自动重新加载浏览器。
 
-如果您在没有运行`npm start`或`yarn start`的情况下开始对客户端代码进行更改，则不会反映任何内容，因为更改未被编译，因此您需要在更改后手动运行`npm run webpack:build`或运行`npm start`或`yarn start`运行。
+如果您在没有运行`npm start`或`yarn start`的情况下开始对前端代码进行更改，则不会反映任何内容，因为更改未被编译，因此您需要在更改后手动运行`npm run webpack:build`或运行`npm start`或`yarn start`运行。
 
 您还可以在传递诸如`./mvnw -Pdev,webpack`或`./gradlew -Pdev -Pwebpack`之类的`webpack`配置文件开始时，强制maven/gradle运行`webpack:dev`任务。这在运行`clean`任务之后特别有用。
 
@@ -29,7 +29,7 @@ Angular使用TypeScript而不是JavaScript，因此需要一些特定的工具�
 
 ## 项目结构
 
-可以在`src/main/webapp`下找到JHipster客户端代码，该代码与[John Papa Angular 2样式指南](https://github.com/johnpapa/angular-styleguide/blob/master/a2/README.md)密切相关。如果您对我们的应用程序结构，文件名，TypeScript约定有任何疑问，请先阅读本指南。
+可以在`src/main/webapp`下找到JHipster前端代码，该代码与[John Papa Angular 2样式指南](https://github.com/johnpapa/angular-styleguide/blob/master/a2/README.md)密切相关。如果您对我们的应用程序结构，文件名，TypeScript约定有任何疑问，请先阅读本指南。
 
 该样式指南已被Angular团队认可，并提供了每个Angular项目都应遵循的最佳实践。
 
@@ -91,11 +91,11 @@ Angular使用TypeScript而不是JavaScript，因此需要一些特定的工具�
 
 ## 鉴权
 
-JHipster使用[Angular路由器](https://angular.io/docs/ts/latest/guide/router.html) 来组织客户端应用程序的不同部分。
+JHipster使用[Angular路由器](https://angular.io/docs/ts/latest/guide/router.html) 来组织前端应用程序的不同部分。
 
 对于每个路径，所需的权限都列在该路径的数据中，并且当权限列表为空时，表示可以匿名访问该路径。
 
-权限也在服务器端`AuthoritiesConstants.java`类中定义，并且从逻辑上讲，客户端和服务器端权限应相同。
+权限也在服务器端`AuthoritiesConstants.java`类中定义，并且从逻辑上讲，前端和服务器端权限应相同。
 
 在下面的示例中，'sessions'路径设计为仅由具有`ROLE_USER`权限的经过身份验证的用户访问：
 
@@ -122,7 +122,7 @@ JHipster使用[Angular路由器](https://angular.io/docs/ts/latest/guide/router.
 
     <h1 *jhiHasAnyAuthority="['ROLE_ADMIN', 'ROLE_USER']">Hello, dear user</h1>
 
-*请注意* 这些指令仅在客户端显示或隐藏HTML组件，并且您还需要在服务器端保护代码！
+*请注意* 这些指令仅在前端显示或隐藏HTML组件，并且您还需要在服务器端保护代码！
 
 ## ng-jhipster库
 
@@ -138,7 +138,7 @@ ng-jhipster库包含Angular 2+应用程序使用的实用程序功能和通用�
 
 ### 通知系统
 
-JHipster使用自定义通知系统将事件从服务器端发送到客户端，并具有支持i18n的`JhiAlertComponent`和`JhiAlertErrorComponent`组件，这些组件可在整个生成的应用程序中使用。
+JHipster使用自定义通知系统将事件从服务器端发送到前端，并具有支持i18n的`JhiAlertComponent`和`JhiAlertErrorComponent`组件，这些组件可在整个生成的应用程序中使用。
 
 默认情况下，当HTTP响应捕获到错误时，JHipster将显示错误通知。
 

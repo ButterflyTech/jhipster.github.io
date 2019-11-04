@@ -12,7 +12,7 @@ sitemap:
 
 ## 项目结构
 
-可以在`src/main/webapp`下找到JHipster客户端代码。
+可以在`src/main/webapp`下找到JHipster前端代码。
 
 如果您对我们的应用程序结构，文件名，TypeScript约定有任何疑问，请先阅读本指南。
 

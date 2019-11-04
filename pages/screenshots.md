@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Screenshots of the generated application
+title: 生成的应用截图  
 permalink: /screenshots/
 redirect_from:
   - /screenshots.html

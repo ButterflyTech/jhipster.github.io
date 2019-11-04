@@ -12,7 +12,7 @@ sitemap:
 # <i class="fa fa-bolt"></i> 创建一个实体
 
 _**请查看有关创建新JHipster应用程序的[视频教程]({{ site.url }}/video-tutorial/)！**_
-如果要"实时重载"JavaScript/TypeScript代码，则需要运行`npm start`或`yarn start`。您可以转到[在开发过程中使用JHipster]({{ site.url }}/development/)页面以获取更多信息。
+如果要实时重载JavaScript/TypeScript代码，则需要运行`npm start`或`yarn start`。您可以转到[在开发过程中使用JHipster]({{ site.url }}/development/)页面以获取更多信息。
 
 ## 介绍
 
@@ -20,7 +20,7 @@ _**请查看有关创建新JHipster应用程序的[视频教程]({{ site.url }}/
 
 *   数据库表
 *   Liquibase变更集
-*   JPA Entity
+*   JPA实体
 *   Spring Data JPA Repository
 *   Spring MVC REST控制器，具有基本的CRUD操作
 *   Angular路由器，组件和服务
@@ -33,7 +33,7 @@ _**请查看有关创建新JHipster应用程序的[视频教程]({{ site.url }}/
 *   数据库外键
 *   用于管理这种关系的特定JavaScript和HTML代码
 
-"entity"子生成器将创建所有必要的文件，并为每个实体提供一个CRUD前端（请参阅[Angular项目结构]({{ site.url }}/using-angular/)和[React项目结构]({{ site.url }}/using-react/))）。可以通过运行`jhipster entity <entityName> --[options]`来调用子生成器。可以通过键入`jhipster entity --help`找到这些选项的参考。
+"entity"子生成器将创建所有必要的文件，并为每个实体提供一个CRUD前端（请参阅[Angular项目结构]({{ site.url }}/using-angular/)和[React项目结构]({{ site.url }}/using-react/))）。可以通过运行`jhipster entity <entityName> --[options]`来调用子生成器。可以通过输入`jhipster entity --help`找到这些选项的参考。
 
 以下是受支持的选项。
 
@@ -81,8 +81,7 @@ _**请查看有关创建新JHipster应用程序的[视频教程]({{ site.url }}/
 
 对于每个实体，您可以根据需要添加任意多个字段。您将需要提供字段名称及其类型，JHipster将为您生成所有所需的代码和配置，从Angular的HTML视图到Liquibase变更文件。
 
-Those fields cannot contain reserved keywords in the technologies you are using. For example, if you use MySQL:
-这些字段不能在您使用的技术中包含的保留关键字。例如，如果您使用MySQL：
+这些字段不包含您使用技术中的保留关键字。例如，如果您使用MySQL：
 *   您不能使用Java保留关键字（因为您的代码将无法编译）
 *   您不能使用MySQL保留关键字（因为数据库表结构更新将失败）
 
@@ -134,7 +133,7 @@ JHipster支持许多字段类型。这种支持取决于您的数据库后端，
 
 ## Entity关系
 
-实体关系仅适用于SQL数据库。这是一个相当复杂的话题，它具有自己单独的文档页面：[关系管理]({{ site.url }}/managing-relationships/)。
+实体关系仅适用于SQL数据库。这是一个相当复杂的话题，它具有自己单独的文档页面：[管理关系]({{ site.url }}/managing-relationships/)。
 
 ## 为您的业务逻辑生成单独的服务类
 
@@ -148,7 +147,7 @@ JHipster支持许多字段类型。这种支持取决于您的数据库后端，
 
 ## 过滤
 
-（可选）可以使用JPA过滤存储在SQL数据库中的实体。这里是文档：[实体过滤]({{ site.url }}/entities-filtering/)。
+（可选）可以使用JPA过滤存储在SQL数据库中的实体。这里是文档：[筛选实体]({{ site.url }}/entities-filtering/)。
 
 ## 分页
 
@@ -171,9 +170,9 @@ JHipster支持许多字段类型。这种支持取决于您的数据库后端，
 
 *   `Yes, re generate the entity` - 这将重新生成您的实体。提示：这可以通过在运行子生成器时传递`--regenerate`标志来强制执行
 
-*   `Yes, add more fields and relationships` - 这将提示您一些问题    ，以添加更多字段和关系
-*   `Yes, remove fields and relationships` - This will give you questions to remove existing fields and relationships from the entity
-*   `No, exit` - This will exist the sub-generator without changing anything
+*   `Yes, add more fields and relationships` - 这将需要您回答一些问题，以添加更多字段和关系
+*   `Yes, remove fields and relationships` - 这将需要您回答一些问题，以便从实体中删除现有字段和关系
+*   `No, exit` - 这将存在子生成器而无需更改任何内容
 
 您可能由于以下原因而要更新您的实体：
 
@@ -192,7 +191,7 @@ JHipster支持许多字段类型。这种支持取决于您的数据库后端，
 
 这是一个简短的教程，介绍如何创建具有一对多关系的两个实体（Author和Book）。
 
-**重要提示** 如果需要要"实时重新加载"JavaScript/TypeScript代码，则需要运行`npm start`或`yarn start`。您可以转到[在开发中使用JHipster]页面以获取更多信息。
+**重要提示** 如果需要要实时重新加载JavaScript/TypeScript代码，则需要运行`npm start`或`yarn start`。您可以转到[在开发中使用JHipster]页面以获取更多信息。
 
 ### 生成"Author"实体
 
@@ -200,37 +199,36 @@ JHipster支持许多字段类型。这种支持取决于您的数据库后端，
 
 `jhipster entity author`
 
-Answer the next questions concerning the fields of this entity, the author has:
-接下来回答有关该实体字段的问题，作者实体包括以下字段：
+接下来回答有关该实体字段的问题，author实体包括以下字段：
 
 *   "name"字段， "String"类型
 *   "birthDate"字段，"LocalDate"类型
 
 然后回答有关实体关系的问题，作者包括：
 
-*   与“book”实体之间的一对多关系（尚不存在， 因为书籍实体还未创建）
+*   与“book”实体之间的一对多关系（尚不存在， 因为book实体还未创建）
 
-### 生成“ Book”实体
+### 生成"Book"实体
 
 `jhipster entity book`
 
-接下来回答有关该实体字段的问题，书籍实体包括以下字段：
+接下来回答有关该实体字段的问题，book实体包括以下字段：
 
 *   "title"字段, "String"类型
 *   "description"字段, "String"类型
 *   "publicationDate"字段, "LocalDate"类型
 *   "price"字段, "BigDecimal"类型
 
-然后回答有关实体关系的问题，这本书：
+然后回答有关实体关系的问题，book：
 
 *   与”author“实体具有多对一关系
 *   并且此关系使用"name"字段（来自Author实体）显示
 
 ### 检查生成的代码
 
-使用`mvn test`运行生成的测试套件，该套件将测试Author实体和Book实体。
+使用`mvn test`运行生成的测试集，该测试集将测试Author实体和Book实体。
 
-启动应用程序（例如，使用`mvn`），在前端登录，并在“实体”菜单中选择"Author"和"Book"实体。
+启动应用程序（例如，使用`mvn`），在前端登录，并在“Entity”菜单中选择"Author"和"Book"实体。
 
 检查数据库表，查看是否正确插入了数据。
 

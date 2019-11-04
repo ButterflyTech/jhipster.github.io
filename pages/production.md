@@ -39,7 +39,7 @@ JHipster生成了完全可用于生产，优化和安全的应用程序。本部
 
 ### 构建可执行的JAR/WAR文件
 
-要将应用程序打包为生成JAR，请使用Maven键入：
+要将应用程序打包为生成JAR，请使用Maven输入：
 
 `./mvnw -Pprod clean verify`
 
@@ -56,7 +56,7 @@ JHipster生成了完全可用于生产，优化和安全的应用程序。本部
 *   `build/libs/jhipster-0.0.1-SNAPSHOT.jar`
 
 
-要将应用程序打包为生产WAR，请使用Maven键入：
+要将应用程序打包为生产WAR，请使用Maven输入：
 
 `./mvnw -Pprod,war clean verify`
 
@@ -89,7 +89,7 @@ JHipster生成了完全可用于生产，优化和安全的应用程序。本部
 
 与部署到应用程序服务器相比，许多人发现仅拥有可执行的JAR文件更加容易。
 
-使用上一步中生成的JAR文件，以生产模式运行它，您可以通过键入（在Mac OS X或Linux上）：
+使用上一步中生成的JAR文件，以生产模式运行它，您可以通过输入（在Mac OS X或Linux上）：
 
 `./jhipster-0.0.1-SNAPSHOT.jar`
 
@@ -174,9 +174,9 @@ JHipster使用`jhipster.http.version`属性（在`application-prod.yml`文件中
 
 `npm run build`
 
-这将使用[Webpack](https://webpack.github.io/)处理所有静态资源（CSS，TypeScript，HTML，JavaScript，图片等），以生成优化的客户端应用程序。
+这将使用[Webpack](https://webpack.github.io/)处理所有静态资源（CSS，TypeScript，HTML，JavaScript，图片等），以生成优化的前端应用程序。
 
-在此过程中，Webpack会将TypeScript代码编译为JavaScript代码，还将生成源映射，因此仍可以调试客户端应用程序。
+在此过程中，Webpack会将TypeScript代码编译为JavaScript代码，还将生成源映射，因此仍可以调试前端应用程序。
 
 这些优化后的资源，如果使用Maven，将在`target/classes/static`中生成，对于Gradle，将在`build/resources/main/static`中生成，并将包含在最终的生产JAR中。
 

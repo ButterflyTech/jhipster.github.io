@@ -15,7 +15,7 @@ _**请查看有关创建新JHipster应用程序的 [视频教程]({{ site.url }}
 
 1. [快速开始](#1)
 2. [生成应用程序时可能遇到的问题](#2)
-3. [使用模板](#5)
+3. [使用蓝图](#5)
 4. [命令行选项](#3)
 5. [提示](#4)
 
@@ -29,7 +29,7 @@ _**请查看有关创建新JHipster应用程序的 [视频教程]({{ site.url }}
 
 `cd myapplication/`
 
-要生成您的应用程序，请键入：
+要生成您的应用程序，请输入：
 
 `jhipster`
 
@@ -39,38 +39,38 @@ _**请查看有关创建新JHipster应用程序的 [视频教程]({{ site.url }}
 
 该应用程序将在[http://localhost:8080](http://localhost:8080)可以访问
 
-重要的是，如果要"实时重新加载"JavaScript/TypeScript代码，则需要运行`npm start`或`yarn start`。您可以转到[在开发环境使用JHipster]({{ site.url }}/development/)页面以获取更多信息。
+重要的是，如果需要实时重新加载JavaScript/TypeScript代码，则需要运行`npm start`或`yarn start`。您可以转到[在开发环境使用JHipster]({{ site.url }}/development/)页面以获取更多信息。
 
 ## <a name="2"></a> 生成应用程序时遇到的选择
 
 _有些选项会根据您之前的选择而改变。例如，如果您没有选择SQL数据库，则无需配置Hibernate缓存。_
 
-### 您要创建哪种 _类型_ 的应用程序？
+### 您要创建哪种_类型_的应用程序？
 
-您创建的应用程序类型取决于您是否希望使用微服务架构。如果不确定使用，默认为"Monolithic应用程序"，可以在 [此处]({{ site.url }}/microservices-architecture/)获得有关微服务的完整说明。
+您创建的应用程序类型取决于您是否希望使用微服务架构。如果不确定使用，默认为Monolithic应用程序，可以在 [此处]({{ site.url }}/microservices-architecture/)获得有关微服务的完整说明。
 
 您可以选择：
 
-*   富应用程序：这是一种经典的，一刀切的应用程序。它易于使用和开发，是我们建议的默认设置。
+*   Monolithic应用程序：这是一种经典的，集所有功能一体的应用程序。它易于使用和开发，是我们建议的默认设置。
 *   微服务应用程序：在微服务架构中，担任独立的一个服务。
 *   微服务网关：在微服务架构中，担任请求路由和请求保护的边缘服务。
 *   JHipster UAA服务器：在微服务架构中，这是保护微服务安全的OAuth2身份验证服务器。有关更多信息，请参考[JHipster UAA文档]({{ site.url }}/using-uaa/)。
 
-### 您的应用程序的base name是什么？
+### What is the base name of your application? (您的应用程序的基础名是什么？)
 
 这是您应用程序的名称。
 
-### 您的默认Java软件包名称是什么？
+### What is your default Java package name? （您的默认Java软件包名称是什么？）
 
 您的Java应用程序将以此为包的根名称。该值由Yeoman存储，以便下次运行生成器时，最新的一个提供的值将成为默认值。当然，您可以通过提供新的包名称来覆盖它。
 
-### 您是否要使用JHipster Registry来配置，监视和扩展您的应用程序？
+### Do you want to use the JHipster Registry to configure, monitor and scale your application? （您是否要使用JHipster Registry来配置，监控和扩展您的应用程序？）
 
 [JHipster Registry]({{ site.url }}/jhipster-registry/)是一个开源工具，用于管理您在运行中的应用程序。
 
 使用微服务架构时，这是必需的（这就是为什么仅在生成monolith时才出现这个选项的原因）。
 
-### 您要使用哪种 _类型_ 的身份验证？
+### Which _type_ of authentication would you like to use? （您要使用哪种 _类型_ 的身份验证？）
 
 该选择的选项取决于先前的选项。例如，如果您选择了上面的[JHipster Registry]({{ site.url }}/jhipster-registry/)，则只能使用JWT身份验证。
 
@@ -84,7 +84,7 @@ _有些选项会根据您之前的选择而改变。例如，如果您没有选�
 
 您可以在我们 [加固应用]({{ site.url }}/security/) 页面上找到更多信息。
 
-### 您要使用哪种 _类型_ 的数据库？
+### Which _type_ of database would you like to use? （您要使用哪种 _类型_ 的数据库？）
 
 您可以选择：
 
@@ -94,13 +94,13 @@ _有些选项会根据您之前的选择而改变。例如，如果您没有选�
 - [Couchbase]({{ site.url }}/using-couchbase/)
 - 无数据库（仅在使用具有JWT身份验证的[微服务应用]({{ site.url }}/microservices-architecture/)时可用）
 
-### 您要使用哪个 _生产_ 数据库？
+### Which _production_ database would you like to use? （您要使用哪个 _生产_ 数据库？)
 
 这是在"production"配置文件使用的数据库。要对其进行配置，请修改您的`src/main/resources/config/application-prod.yml` 文件。
 
 如果要使用Oracle，则需要[手动安装Oracle JDBC驱动程序]({{ site.url }}/using-oracle/)。
 
-###  您要使用哪个 _开发_ 数据库？
+###  Which _development_ database would you like to use? (您要使用哪个 _开发_ 数据库？)
 
 这是在"development"配置文件使用的数据库，你可以选择：
 
@@ -110,47 +110,47 @@ _有些选项会根据您之前的选择而改变。例如，如果您没有选�
 
 要对其进行配置，请修改您的`src/main/resources/config/application-dev.yml`文件。
 
-### 您是否要使用Spring抽象缓存？
+### Do you want to use the Spring cache abstraction? (您是否要使用Spring抽象缓存？)
 
 Spring抽象缓存允许使用不同的缓存实现：您可以使用[ehcache](http://ehcache.org/)（本地缓存），[Caffeine](https://github.com/ben-manes/caffeine)（本地缓存），[Hazelcast](http://www.hazelcast.com/)（分布式缓存）[Infinispan](http://infinispan.org/)（另一个分布式缓存）。这可能会对您的应用程序的性能产生非常积极的影响，因此建议您选择该选项。
 
-###您是否要使用Hibernate 2级缓存？
+###Do you want to use Hibernate 2nd level cache? (您是否要使用Hibernate 2级缓存？)
 
 仅当您选择使用SQL数据库（因为JHipster将使用Spring Data JPA访问它）并且在上一个选择中选择了缓存实现服务时，此选项才可用。
 
 [Hibernate](http://hibernate.org/)是JHipster使用的JPA提供程序，它可以使用缓存提供程序大大提高其性能。因此，我们强烈建议您使用此选项，并根据应用程序的需要调整缓存的实现。
 
-### 您要使用Maven还是Gradle？
+### Would you like to use Maven or Gradle? （您要使用Maven还是Gradle？）
 
 您可以使用[Maven](http://maven.apache.org/)或[Gradle](http://www.gradle.org/)构建生成的Java应用程序。Maven更稳定，更成熟。Gradle更灵活，更易于扩展且更具推广意义。
 
-### 您还想使用其他哪些技术？
+### Which other technologies would you like to use? （您还想使用哪些其他技术？）
 
 这是一个多选答案，可以添加一种或多种其他技术到应用程序中。可用的技术有：
 
-#### 使用swagger-codegen的API先行开发
+#### API first development using swagger-codegen （使用swagger-codegen的API先行开发）
 
 通过此选项，您可以通过将[Swagger-Codegen](https://github.com/swagger-api/swagger-codegen)集成到构建中来为应用程序进行API先行开发。
 
-#### 使用ElasticSearch的搜索引擎
+#### Search engine using ElasticSearch （使用ElasticSearch的搜索引擎）
 
 [Elasticsearch](https://github.com/elastic/elasticsearch)将使用Spring Data Elasticsearch配置。您可以在我们的[Elasticsearch指南]({{ site.url }}/using-elasticsearch/)中找到更多信息。
 
-#### 使用Hazelcast的集群HTTP会话
+#### Clustered HTTP sessions using Hazelcast （使用Hazelcast的集群HTTP会话）
 
 默认情况下，JHipster仅使用HTTP会话来存储[Spring Security](http://docs.spring.io/spring-security/site/index.html)的身份验证和授权信息。当然，您可以选择在HTTP会话中放入更多数据。
 如果您在集群中运行，则使用HTTP会话会引起问题，尤其是如果您不将负载均衡器与“粘性会话”一起使用。
 如果要在群集中复制会话，请选择此选项以配置[Hazelcast](http://www.hazelcast.com/)。
 
-#### 使用Spring Websocket的WebSockets
+#### WebSockets using Spring Websocket （使用Spring Websocket的WebSockets）
 
 可以使用Spring Websocket启用Websocket。我们还提供了一个完整的示例，向您展示如何有效地使用框架。
 
-#### 使用Apache Kafka的异步消息
+#### Asynchronous messages using Apache Kafka （使用Apache Kafka的异步消息）
 
 使用[Apache Kafka]({{ site.url }}/using-kafka/)作为发布/订阅消息代理服务。
 
-### 您想为前端选择使用哪个框架？
+### Which _Framework_ would you like to use for the client? (您想为前端选择使用哪个 _框架_ ？)
 
 要使用的前端框架。
 
@@ -159,23 +159,23 @@ Spring抽象缓存允许使用不同的缓存实现：您可以使用[ehcache](h
 *   Angular
 *   React
 
-### 您要使用Bootswatch主题吗？
+### Would you like to use a Bootswatch theme? (您要使用Bootswatch主题吗？)
 
 要使用的前端题。
 
 您可以使用[Bootswatch](https://bootswatch.com/)中的任何主题，也可以选择默认主题。
 
-### 您想为CSS使用Sass样式表预处理器吗？
+### Would you like to use the Sass stylesheet preprocessor for your CSS? (您想为CSS使用Sass样式表预处理器吗？)
 
 [Sass](https://sass-lang.com/)是简化CSS设计的绝佳解决方案。为了高效使用，您将需要运行[Webpack](https://webpack.js.org)开发服务，该服务将自动配置Sass。
 
-### 您想启用国际化支持吗？
+### Would you like to enable internationalization support? (您想启用国际化支持吗？)
 
 默认情况下，JHipster在前端和后端都提供出色的国际化支持。但是，国际化支持会增加一些额外的性能开销，并且管理起来会有些复杂，因此您可以选择不安装此功能。
 
 请注意，JHipster仅支持UI国际化。为了实现数据国际化，您需要在JPA/Hibernate层中自己编写代码。
 
-### 您想使用哪些测试框架？
+### Which testing frameworks would you like to use? (您想使用哪些测试框架？)
 
 默认情况下，JHipster提供Java单元/集成测试（使用Spring的JUnit支持）和JavaScript单元测试（使用Jest）。您还可以添加对以下内容的支持：
 
@@ -185,7 +185,7 @@ Spring抽象缓存允许使用不同的缓存实现：您可以使用[ehcache](h
 
 您可以在["运行测试"指南]({{ site.url }}/running-tests/)中找到更多信息。
 
-### 您是否要从JHipster市场安装其他生成器？
+### Would you like to install other generators from the JHipster Marketplace? (您是否要从JHipster市场安装其他生成器？)
 
 在[JHipster Marketplace]({{ site.url }}/modules/marketplace/)上，您可以安装由第三方开发人员编写的其他模块，以向项目中添加非官方功能。
 
@@ -207,7 +207,7 @@ jhipster --blueprint kotlin
 
 ## <a name="3"></a> 命令行选项
 
-您还可以使用一些可选的命令行选项运行JHipster。可以通过键入`jhipster app --help`来找到这些选项的参考。
+您还可以使用一些可选的命令行选项运行JHipster。可以通过输入`jhipster app --help`来找到这些选项的参考。
 
 您可以通过以下选项：
 * `--help` - 显示生成器的选项和用法

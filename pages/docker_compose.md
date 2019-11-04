@@ -41,8 +41,7 @@ JHipster提供了完整的Docker支持，以便：
 自动生成应用程序时，JHipster会为您生成：
 
 - 用于构建Docker镜像并在容器内运行应用程序的`Dockerfile`
-- Several Docker Compose configurations to help you run your application with third-party services, for example a database
-- 多个帮助您第三方服务（例如数据库）快速运行的Docker Compose配置文件
+- 多个帮助您的第三方服务（例如数据库）快速运行的Docker Compose配置文件
 
 这些文件位于文件夹`src/main/docker/`中。
 
@@ -53,7 +52,7 @@ JHipster提供了完整的Docker支持，以便：
 - [Docker](https://docs.docker.com/installation/#installation)
 - [Docker Compose](https://docs.docker.com/compose/install)
 
-现在需要在Docker商店中创建一个帐户来下载Docker for Mac和Docker for Windows。让我们绕过这个
+现在需要在Docker商店中创建一个帐户来下载Docker for Mac和Docker for Windows。让我们绕过这个限制
 
 <div class="alert alert-info"><i>提示: </i>
 
@@ -99,10 +98,10 @@ __解决方案2__
 
 <div id="3-warning" class="alert alert-warning"><i>注意: </i>
 <p>
-由于Jib的工作方式，它将首先尝试从配置的Docker仓库中拉取Docker基础镜像的最新版本。这样操作是有原因的，因为在CI环境中，您必须确保始终在最新的基础映像之上构建自己的镜像。
+由于Jib的工作方式，它将首先尝试从配置的Docker仓库中拉取Docker基础镜像的最新版本。这样操作是有原因的，因为在CI环境中，您必须确保始终在最新的基础镜像之上构建自己的镜像。
 </p>
 <p>
-但是，在本地环境中，如果Jib无法访问Docker仓库，则这可能会使您的构建失败。一种解决方法是使用`--offline`标识，只要Jib已经将Docker基本镜像拉取到其缓存中，该问题便会迎刃而解。
+但是，在本地环境中，如果Jib无法访问Docker仓库，则这可能会使您的构建失败。一种解决方法是使用`--offline`标识，只要Jib已经将Docker基本镜像拉取到其本地缓存中，该问题便会迎刃而解。
 </p>
 <p>
 使用Maven，输入：<pre>./mvnw -Pprod package verify jib:dockerBuild --offline</pre>
@@ -127,18 +126,18 @@ __解决方案2__
 
 要使用docker-compose子生成器，请执行以下操作：
 
-- 您需要将所有的富应用，网关和微服务放在同一目录中。
+- 您需要将所有的monolith应用，网关和微服务放在同一目录中。
 - 创建另一个新目录, 例如 `mkdir docker-compose`.
 - 进入目录: `cd docker-compose`.
 - 执行子生成器: `jhipster docker-compose`.
 - 子生成器将询问您要在架构中使用哪个应用程序，以及是否要使用ELK或Prometheus设置系统监控。
 
-这将生成一个全局的Docker Compose配置，键入`docker-compose up`来运行它，所有服务将会立即运行。
+这将生成一个全局的Docker Compose配置，输入`docker-compose up`来运行它，所有服务将会立即运行。
 
 对于微服务架构，此配置还将预配置了JHipster Registry或Consul，这将自动配置您的服务：
 - 这些服务将等待JHipster Registry（或Consul）正常工作之后运行。可以在`bootstrap-prod.yml`文件设置`spring.cloud[.consul].config.fail-fast`和`spring.cloud[.consul].config.retry`配置。
 - JHipster Registry或Consul将配置您的应用程序，例如: 在所有服务之间共享JWT Token。
-- 使用Docker Compose来完成每个服务的扩展，例如，输入`docker-compose scale test-app=4`可以运行4个"test"应用程序实例。这些实例将由网关自动进行负载平衡，并将自动加入相同的Hazelcast群集（如果Hazelcast是您的Hibernate 2级缓存）。
+- 使用Docker Compose来完成每个服务的扩展，例如，输入`docker-compose scale test-app=4`可以运行4个"test"应用程序实例。这些实例将由网关自动进行负载均衡，并将自动加入相同的Hazelcast群集（如果Hazelcast是您的Hibernate 2级缓存）。
 
 ## <a name="4"></a> 使用数据库
 
@@ -306,8 +305,6 @@ Sonar生成的报告在这个位置可以获取：[http://localhost:9000](http:/
     ENV JAVA_OPTS=-Xmx512m -Xms256m
 
 ### 将内存参数添加到docker-compose.yml
-
-This solution is desired over Dockerfile. In this way, you have a single control point for your memory configuration on all containers that compose your application.
 
 Dockerfile需要此解决方案。这样，您就可以在组成应用程序的所有容器上为内存配置设置一个控制点。
 

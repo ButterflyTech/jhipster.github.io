@@ -12,7 +12,7 @@ sitemap:
 
 ## 项目结构
 
-您可以在`src/main/webapp`下找到JHipster客户端代码，该代码与[Piotr Witek React样式指南](https://github.com/piotrwitek/react-redux-typescript-guide/blob/master/README.md)密切相关。
+您可以在`src/main/webapp`下找到JHipster前端代码，该代码与[Piotr Witek React样式指南](https://github.com/piotrwitek/react-redux-typescript-guide/blob/master/README.md)密切相关。
 
 如果您对我们的应用程序结构、文件名、TypeScript约定有任何疑问，请先阅读本指南。
 

@@ -96,6 +96,6 @@ if(project.hasProperty('strict-security')) {
 
 通过运行`./gradlew check -Pstrict-security`，可以通过依赖性检查来更新持续集成构建。
 
-## 在客户端检查
+## 在前端检查
 
 从版本6开始，默认情况下，NPM包括针对每个依赖项安装的安全审核。查看[关于安全审核](https://docs.npmjs.com/getting-started/running-a-security-audit)页面以获取更多信息。

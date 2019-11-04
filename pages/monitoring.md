@@ -13,7 +13,7 @@ JHipster提供了几个选项来监视您运行应用程序。
 ## 摘要
 
 1. [生成的仪表板](#generated-dashboards)
-2. [JHipster注册中心](#jhipster-registry)
+2. [JHipster Registry](#jhipster-registry)
 3. [JHipster Console](#jhipster-console)
 4. [将指标转发到受支持的第三方监视系统](#configuring-metrics-forwarding)
 5. [Zipkin](#zipkin)
@@ -46,9 +46,9 @@ JHipster提供了几个选项来监视您运行应用程序。
 
 日志仪表板允许在运行时管理正在运行的应用程序的Logback配置。更改Java软件包的日志级别就像单击按钮一样简单，这在开发和生产中都非常方便。
 
-## <a name="jhipster-registry"></a> JHipster注册中心
+## <a name="jhipster-registry"></a> JHipster Registry
 
-JHipster注册中心[在此处具有自己单独的文档页面]({{ site.url }}/jhipster-registry/)。
+JHipster Registry[在此处具有自己单独的文档页面]({{ site.url }}/jhipster-registry/)。
 
 它主要提供与上一部分相同的监视仪表板，但可在​​单独的服务器上工作。因此，设置起来有点复杂，但是强烈建议让仪表板与正在运行的应用程序隔离运行：否则，当应用程序出现故障时，它们将不可用。
 

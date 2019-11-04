@@ -18,7 +18,7 @@ _注意：此子生成器比创建完整CRUD实体的[实体子生成器]({{ sit
 
 该子生成器生成一个Spring Service bean，您应该在此bean中编写应用程序的业务逻辑。
 
-生成"Bar"的Service bean, 只需键入：
+生成"Bar"的Service bean, 只需输入：
 
 `jhipster spring-service Bar`
 

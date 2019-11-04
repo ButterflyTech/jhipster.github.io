@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Video tutorial
+title: 视频教程
 permalink: /video-tutorial/
 redirect_from:
   - /video_tutorial.html

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Using JHipster UAA for Microservice Security
+title: 使用JHipster UAA提供微服务安全
 permalink: /using-uaa/
 redirect_from:
   - /security.html
@@ -176,7 +176,7 @@ JWT签名不需要RSA，Spring Security确实也提供对称令牌签名。这�
 当一个服务要向另一个服务请求数据时，最终这四个组件都开始起作用。因此，重要的是要简短地了解，每个组件具体负责了什么：
 
 * Eureka: 这是服务（取消）注册的地方，因此您可以询问"foo-service"，并获取在Eureka中注册的foo-service实例的一组IP。
-* Ribbon: 当有人要"foo-service"并已经检索到一组IP时，Ribbon会在这些IP上进行负载平衡。
+* Ribbon: 当有人要"foo-service"并已经检索到一组IP时，Ribbon会在这些IP上进行负载均衡。
 
 综上所述，当我们获得一个URL，例如"http://uaa/oauth/token/"，其中有两个运行在10.10.10.1:9999和10.10.10.2:9999上的JHipster UAA服务器实例时，我们可以使用Eureka和Ribbon使用Round Robin算法将该网址快速转换为"http://10.10.10.1:9999/oauth/token"或"http://10.10.10.2:9999/oauth/token"。
 

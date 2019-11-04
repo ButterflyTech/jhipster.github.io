@@ -32,14 +32,14 @@ JHipster使用标准的Maven目录布局。在后端上工作时，您只需阅�
 
 在前端工作时，您需要知道两个目录：
 
-- `src/main/webapp` 是开发客户端应用程序的地方
-- `target/www` 是您的客户端应用程序将被打包的位置
+- `src/main/webapp` 是开发前端应用程序的地方
+- `target/www` 是您的前端应用程序将被打包的位置
 
 如果您有分别在前端和后端工作的团队，则有两种解决方案：
 
 - 两个团队可以从事同一个项目。由于目录是分开的，因此团队之间不会有太多冲突。为了使事情变得更加清洁，两个团队可以在不同的分支上开发。
 
-- 前端代码可以存储在一个特定的Git项目中，然后作为Git子模块导入到主后端项目中。这将需要移动客户端构建脚本，但这是一个简单的重构。
+- 前端代码可以存储在一个特定的Git项目中，然后作为Git子模块导入到主后端项目中。这将需要移动前端构建脚本，但这是一个简单的重构。
 
 ## HTTP请求路由和缓存
 
@@ -47,8 +47,8 @@ JHipster使用标准的Maven目录布局。在后端上工作时，您只需阅�
 
 - 所有API调用都将使用`/api`前缀。如果您使用的是Angular，则还可以在`webpack.common.js`配置中定义一个特定的`SERVER_API_URL`常量，该常量可以丰富此前缀配置。例如，您可以将`"http://api.jhipster.tech:8081/"`用作后端API服务器（如果这样做，请阅读下面有关CORS的文档）。
 - 调用`/`提供的静态资源（从前端），而不应由浏览器缓存。
-- 对`/app`（包含客户端应用程序）和`/content`（包含静态内容，如图像和CSS）的调用应在生产中进行缓存，因为这些资产是经过哈希处理的。
-- 调用不存在的路由应将请求转发到`index.html`。这通常在后端通过`ClientForwardController`处理。单独部署客户端时，需要进行额外配置。有关几个示例，请参见[Angular](https://angular.io/guide/deployment#server-configuration)或[React](https://facebook.github.io/create-react-app/docs/deployment)文档。
+- 对`/app`（包含前端应用程序）和`/content`（包含静态内容，如图像和CSS）的调用应在生产中进行缓存，因为这些资产是经过哈希处理的。
+- 调用不存在的路由应将请求转发到`index.html`。这通常在后端通过`ClientForwardController`处理。单独部署前端时，需要进行额外配置。有关几个示例，请参见[Angular](https://angular.io/guide/deployment#server-configuration)或[React](https://facebook.github.io/create-react-app/docs/deployment)文档。
 
 # 使用BrowserSync
 
@@ -135,7 +135,7 @@ JHipster提供了开箱即用的CORS配置：
 
 这是Oauth 2.0的示例`site.conf`：
 如果服务器基本名称为`back`，并且托管traefik的服务器名称为`api.jhipster.tech`。
-如果此配置用于docker映像，请不要使用`localhost`代替`api.jhipster.tech`，因为它是在容器而不是主机中解析的。
+如果此配置用于docker镜像，请不要使用`localhost`代替`api.jhipster.tech`，因为它是在容器而不是主机中解析的。
 
     server {
         listen 80;

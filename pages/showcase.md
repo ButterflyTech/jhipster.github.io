@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Showcase
+title: 展示柜
 permalink: /showcase/
 redirect_from:
   - /showcase.html
@@ -9,7 +9,7 @@ sitemap:
     lastmod: 2014-10-18T00:00:00-00:00
 ---
 
-# <i class="fa fa-file-image-o"></i> Showcase
+# <i class="fa fa-file-image-o"></i> 展示柜
 
 Jhipster创建的优秀应用展示.
 

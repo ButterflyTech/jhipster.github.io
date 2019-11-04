@@ -17,7 +17,7 @@ sitemap:
 
 - 使用JHipster配置[Spring Cloud Stream](https://cloud.spring.io/spring-cloud-stream/)。
 - 在`application-*.yml`文件中添加必要的配置，设置了一个示例的`topic-jhipster`主题，并针对Kafka的运行健康检查监视器（将在`health`管理屏幕中可用）。
-- 生成带有示例`topic-jhipster`主题的Docker Compose配置文件，因此只需键入`docker-compose -f src/main/docker/kafka.yml up -d`，即可使用Kafka。
+- 生成带有示例`topic-jhipster`主题的Docker Compose配置文件，因此只需输入`docker-compose -f src/main/docker/kafka.yml up -d`，即可使用Kafka。
 - 使用Docker时，在微服务环境中提供对Kafka的支持。如果一个微服务或一个网关使用Kafka，则Docker Compose子生成器将生成特定的Kafka配置。然后，所有微服务和网关都将使用该Kafka代理获取其所有消息。代理对于所有应用程序都是通用的，因为它通常用作应用程序之间的消息代理。
 
 ## 在JHipster应用程序中将Kafka与Spring Cloud Stream一起使用的教程

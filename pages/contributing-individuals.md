@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contributing Individuals
+title: 个人贡献
 permalink: /contributing-individuals/
 sitemap:
     priority: 0.1
@@ -8,15 +8,15 @@ sitemap:
 ---
 # <i class="fa fa-keyboard-o"></i> 个人贡献
 
-JHipster拥有许多[贡献者](https://github.com/jhipster/generator-jhipster/graphs/contributors), 我们尽自己最大努力支撑大家为我们添砖加瓦! 非常期待你的加入!
+JHipster拥有许多[贡献者](https://github.com/jhipster/generator-jhipster/graphs/contributors), 我们尽自己最大努力支持大家为我们添砖加瓦! 非常期待你的加入!
 
 ## 行为守则
 
 在你提交之前, 请阅读我们的[行为守则](https://github.com/jhipster/generator-jhipster/blob/master/CODE_OF_CONDUCT.md).
 
-## 获得帮助
+## 获取帮助
 
-与项目中的其他人一样，您可以使用[帮助]({{ site.url }}/help/)页面上列出的常用支撑途径来寻求帮助。
+与项目中的其他人一样，您可以使用[帮助]({{ site.url }}/help/)页面上列出的常用支持途径来寻求帮助。
 
 无论你有什么困难, 我们团队都会尽最大努力来帮助你:
 

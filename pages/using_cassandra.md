@@ -83,7 +83,7 @@ Cassandra是生成应用程序时可以选择的受支持数据库之一。
 
 由于Cassandra节点也托管在虚拟机中，因此在从访问点接收到它们的地址后，尝试连接它们时，Cassandra Java驱动程序将收到错误消息。
 
-要解决此问题，可以将路由规则添加到路由表（[(source)](http://krasserm.github.io/2015/07/13/chaos-testing-with-docker-and-cassandra/#port-mapping)）中。
+要解决此问题，可以将路由规则添加到路由表[(source)](http://krasserm.github.io/2015/07/13/chaos-testing-with-docker-and-cassandra/#port-mapping)中。
 
 假设运行Cassandra节点的容器的IP地址为172.18.0.x：
 ``sudo route -n add 172.18.0.0/16 `docker-machine ip default` ``

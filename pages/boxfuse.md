@@ -15,7 +15,7 @@ sitemap:
 
 [![]({{ site.url }}/images/logo/logo-boxfuse.png)](https://boxfuse.com/)
 
-Boxfuse**对JHipster具有一流支持**，通过为您的应用程序创建最小的不可变机器镜像来工作，然后可以将其部署在VirtualBox或AWS上。
+Boxfuse**对JHipster具有一等支持**，通过为您的应用程序创建最小的不可变机器镜像来工作，然后可以将其部署在VirtualBox或AWS上。
 
 <div class="alert alert-info"><i>提示: </i>
 作为Boxfuse的替代方法，您还可以使用<a href="{{ site.url }}/aws/">Elastic Beanstalk</a>将JHipster应用程序部署到AWS。

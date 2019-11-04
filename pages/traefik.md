@@ -29,7 +29,7 @@ Traefik的好处之一是可以与许多不同的服务发现解决方案一起�
 
 这是我们的默认配置。
 
-## Architecture diagram 2: Traefik和Zuul
+## 架构图2: Traefik和Zuul
 
 Traefik也可以与Zuul一起使用：在这种情况下，对微服务的HTTP请求，先通过Traefik，然后通过Zuul，然后再到达其目的地。
 
@@ -61,13 +61,13 @@ Traefik也可以与Zuul一起使用：在这种情况下，对微服务的HTTP�
 
 #### 配置您的基本HREF
 
-在构建网关的Docker映像之前，您需要在`webpack.common.js`中配置`baseHref`值以匹配网关基本名称。例如，如果网关基本名称为`gateway`，则`baseHref`应为`/services/gateway/`。
+在构建网关的Docker镜像之前，您需要在`webpack.common.js`中配置`baseHref`值以匹配网关基本名称。例如，如果网关基本名称为`gateway`，则`baseHref`应为`/services/gateway/`。
 
 #### 为OAuth 2.0配置
 
 如果您将前端和api分开，则无需在本地执行其他配置。只需`npm start`并转到`http://localhost:9000`
 
-在构建网关的Docker映像之前，必须[配置您的基本HREF](#configure-your-base-href)并更新各种文件。
+在构建网关的Docker镜像之前，必须[配置您的基本HREF](#configure-your-base-href)并更新各种文件。
 
 ##### 服务
 

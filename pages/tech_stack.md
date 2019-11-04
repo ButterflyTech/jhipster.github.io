@@ -20,7 +20,7 @@ sitemap:
 *   [HTML5 Boilerplate模板](http://html5boilerplate.com/)
 *   现代浏览器兼容 (Chrome, FireFox, Microsoft Edge...)
 *   完整国际化支持
-*   可选的Sass[Sass](https://www.npmjs.com/package/node-sass)支持
+*   可选的[Sass](https://www.npmjs.com/package/node-sass)支持
 *   基于Sprint websocket组件可选的Websocket支持
 
 优秀的开发工作流:
@@ -45,21 +45,21 @@ sitemap:
 *   基于Sprint websocket组件, 可选的Websocket支持
 *   [Spring Data JPA](http://projects.spring.io/spring-data-jpa/)和Bean校验
 *   基于[Liquibase](http://www.liquibase.org/)数据库更新
-*   [Elasticsearch](https://github.com/elastic/elasticsearch)Elasticaearch支持，如果你需要基于你的数据库提供上层搜索能力
+*   [Elasticsearch](https://github.com/elastic/elasticsearch)支持，如果你需要基于你的数据库提供高级搜索能力
 *   [MongoDB](http://www.mongodb.org)和[Couchbase](https://www.couchbase.com) 支持, 如果你想使用面向文档的NOSQL数据库替代JPA
 *   [Cassandra](http://cassandra.apache.org/)支持, 如果你想使用面向列的NOSQL数据库替代JPA
 *   [Kafka](http://kafka.apache.org/)支持, 如果你需要一个消息发布订阅系统
 
 ## 微服务技术栈
 
-微服务也是可选的，但完全支持:
+微服务是可选的，但完全支持:
 
 * 基于[Netflix Zuul](https://github.com/Netflix/zuul)或[Traefik](https://traefik.io/)的HTTP流量路由
-* 基 [Netflix Eureka](https://github.com/Netflix/eureka)或[HashiCorp Consul](https://www.consul.io/)的服务发现
+* 基于[Netflix Eureka](https://github.com/Netflix/eureka)或[HashiCorp Consul](https://www.consul.io/)的服务发现
 
 ## 适应生产环境:
 
-*   使用[Metrics](http://metrics.dropwizard.io/)和[the ELK Stack](https://www.elastic.co/products)监控
+*   使用[Metrics](http://metrics.dropwizard.io/)和[ELK Stack](https://www.elastic.co/products)监控
 *   使用[ehcache](http://ehcache.org/)(本地缓存), [Caffeine](https://github.com/ben-manes/caffeine) (本地缓存), [hazelcast](http://www.hazelcast.com/)或[Infinispan](http://infinispan.org/)提供缓存
 *   静态资源优化 (gzip filter, HTTP cache headers)
 *   使用[Logback](http://logback.qos.ch/)管理日志，可在运行时配置日志输出

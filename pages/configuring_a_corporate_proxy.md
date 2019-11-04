@@ -139,7 +139,7 @@ systemProp.https.nonProxyHosts=local.net|some.host.com
 
 然后，您必须使用以下命令重新启动docker服务：`sudo service docker restart`
 
-它不适用于systemd。请从 [page from docker](https://docs.docker.com/engine/admin/systemd/#http-proxy)查看相关的代理配置。
+它不适用于systemd。请从[docker页面](https://docs.docker.com/engine/admin/systemd/#http-proxy)查看相关的代理配置。
 
 ### 带有docker-machine的Docker
 

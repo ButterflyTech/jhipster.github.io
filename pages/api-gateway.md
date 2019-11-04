@@ -35,7 +35,7 @@ JHipster可以生成API网关。网关是普通的JHipster应用程序，因此�
 
 如果有多个运行同一服务的实例，则网关将从JHipster Registry获取这些实例，并将：
 
-- 使用[Netflix Ribbon](https://github.com/Netflix/ribbon)负载均衡HTTP请求。 Load balance HTTP requests using.
+- 使用[Netflix Ribbon](https://github.com/Netflix/ribbon)负载均衡HTTP请求。
 - 使用[Netflix Hystrix](https://github.com/Netflix/hystrix)提供断路器，以便快速，安全地删除发生故障的实例。
 
 每个网关都有一个特定的"admin > gateway"菜单，可以在其中监视打开的HTTP路由和微服务实例。

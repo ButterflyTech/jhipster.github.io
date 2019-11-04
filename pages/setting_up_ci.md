@@ -50,35 +50,35 @@ JHipster应该开箱即用地支持以下CI系统：
 docker-compose -f src/main/docker/jenkins.yml up -d
 ```
 
-### Would you like to perform the build in a Docker container ? (Jenkins / GitLab)
+### Would you like to perform the build in a Docker container ? (Jenkins / GitLab) (您想在Docker容器中执行构建吗？（Jenkins/ GitLab）)
 
 如果安装了Docker，则可以在Docker容器内执行构建。
 
-### In GitLab CI, perform the build in a docker container (hint: GitLab.com uses Docker container) ? (GitLab)
+### In GitLab CI, perform the build in a docker container (hint: GitLab.com uses Docker container) ? (GitLab) (在GitLab CI中，在Docker容器中执行构建（提示：GitLab.com使用Docker容器）？（GitLab）)
 
 如果您使用私有的GitLab CI，则可以直接使用runners。
 
 如果您使用官方的GitLab.com pipeline，则需要使用Docker容器。
 
-### Would you like to send build status to GitLab ? (Jenkins)
+### Would you like to send build status to GitLab ? (Jenkins) (您想将构建状态发送给GitLab吗？（Jenkins）)
 
 如果您的Jenkins依赖于GitLab存储库，则可以将构建状态发送到GitLab。您的Jenkins必须正确配置。
 
-### What tasks/integrations do you want to include ?
+### What tasks/integrations do you want to include ? (您要包括哪些任务/集成？)
 
 - 将您的应用程序部署到*Artifactory*
 - 使用*Sonar*分析您的代码
 - 构建并发布*Docker*镜像
 - 部署到*Heroku*（需要在CI服务上设置HEROKU_API_KEY）
 
-### Deploy your application to an *Artifactory* (Jenkins / GitLab)
+### Deploy your application to an *Artifactory* (Jenkins / GitLab) (将您的应用程序部署到*Artifactory*（Jenkins / GitLab）)
 
 - *Artifactory*: what is the ID of distributionManagement for snapshots ?
 - *Artifactory*: what is the URL of distributionManagement for snapshots ?
 - *Artifactory*: what is the ID of distributionManagement for releases ?
 - *Artifactory*: what is the URL of distributionManagement for releases ?
 
-### Analyze your code with *Sonar*
+### Analyze your code with *Sonar* (使用*Sonar*分析您的代码)
 
 - *Sonar*: what is the name of the Sonar server ?
 
@@ -90,7 +90,7 @@ docker-compose -f src/main/docker/jenkins.yml up -d
 在这里，您可以选择将Sonar Analyze推送到[SonarCloud.io](https://sonarcloud.io)。
 在这种情况下，您必须添加`SONAR_TOKEN`环境变量。
 
-### Build and publish a *Docker* image
+### Build and publish a *Docker* image (构建并发布*Docker*镜像)
 
 - *Docker*: what is the URL of the Docker registry ?
 
@@ -102,7 +102,7 @@ docker-compose -f src/main/docker/jenkins.yml up -d
 
 - *Docker*: what is the Organization Name for the Docker registry?
 
-### Deploy to *Heroku*
+### Deploy to *Heroku* （部署到*Heroku*）
 
 - *Heroku: name of your Heroku Application ?
 

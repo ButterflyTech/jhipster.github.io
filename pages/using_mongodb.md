@@ -34,6 +34,6 @@ error: {
 ```
 
 由于[Mongobee](https://github.com/mongobee/mongobee/)不再维护，因此您可以迁移到[Mongock](https://github.com/cloudyrock/mongock)。访问：
-- the ticket: [issues/8665](https://github.com/jhipster/generator-jhipster/issues/8665)
-- the proposal: [issues/8678](https://github.com/jhipster/generator-jhipster/issues/8678)
-- the question on [StackOverFlow](https://stackoverflow.com/questions/49958635/mongodb-atlas-user-is-not-allowed-to-do-action-find-on-system-indexes)
+- 问题: [issues/8665](https://github.com/jhipster/generator-jhipster/issues/8665)
+- 提案: [issues/8678](https://github.com/jhipster/generator-jhipster/issues/8678)
+- [StackOverFlow](https://stackoverflow.com/questions/49958635/mongodb-atlas-user-is-not-allowed-to-do-action-find-on-system-indexes)上的提问
